@@ -4,3 +4,6 @@
 # Node / frontend
 node_modules/
 dist/
+
+#python 
+backend/.venv
