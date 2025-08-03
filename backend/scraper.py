@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """
 Scraper.py
-
 Fetches the New York Times Hard Sudoku puzzle from
 https://www.nytimes.com/puzzles/sudoku/hard and
 appends it as a JSON record to DailySudokus.jl.
