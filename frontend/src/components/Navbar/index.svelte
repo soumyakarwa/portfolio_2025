@@ -36,5 +36,6 @@
 
 	a.active:hover {
 		background-image: none;
+		cursor: default;
 	}
 </style>

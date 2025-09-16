@@ -1,6 +1,7 @@
 <script lang="ts">
 	interface Props {
 		id: string;
+		startingPos: number[];
 		wip?: boolean;
 		title: string;
 		overview: string;
@@ -12,25 +13,27 @@
 			description: string;
 			images: string[];
 		}[];
+		isActive: boolean;
 	}
 
-	let { id, wip, title, overview, tags, role, tech, content }: Props = $props();
+	let { id, startingPos, wip, title, overview, tags, role, tech, content, isActive }: Props =
+		$props();
 
-	const randomPos = {
-		top: `${Math.random() * 100}%`,
-		left: `${Math.random() * 100}%`
-	};
+	let imageWidth = $state(0);
+	let imageHeight = $derived((imageWidth * 9) / 16);
 </script>
 
 <div
+	class="absolute top-0 left-0 z-0 -translate-3/4 border-[0.5px] border-solid border-black bg-white"
+	style:width="{imageWidth * 0.75}px"
+	style:height="{imageHeight * 0.75}px"
+></div>
+<div
 	id={`project-${id}`}
-	class={[
-		'absolute flex h-1/2 w-1/3 flex-col gap-4 p-3 opacity-100 transition-opacity duration-100 ease-linear hover:cursor-pointer hover:opacity-100',
-		`left-[${randomPos.left}] top-[${randomPos.top}]`
-	]}
-	style="background-image:var(--dashed-border)"
+	class="absolute z-10 flex h-full w-full flex-col justify-around p-3"
+	style:background-image="var(--dashed-border)"
 >
-	<div class="h-4/10 w-full bg-black"></div>
+	<div class="w-full bg-black" bind:clientWidth={imageWidth} style:height="{imageHeight}px"></div>
 	<div class="flex flex-col">
 		<div class="text-base uppercase">{title}</div>
 		<div class="text-xs">{overview}</div>

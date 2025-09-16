@@ -57,7 +57,7 @@
 		<Navbar links={socialLinks} textClass={'text-xs'} />
 	</div>
 
-	<div class="h-full w-screen p-6" style="background-image:var(--dashed-border)">
+	<div class="h-full w-screen overflow-y-auto p-6" style="background-image:var(--dashed-border)">
 		{@render children?.()}
 	</div>
 </div>
