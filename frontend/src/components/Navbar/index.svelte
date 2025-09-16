@@ -24,6 +24,7 @@
 <style>
 	a {
 		background-image: none;
+		transition: font-weight 0.3s linear;
 	}
 
 	a:hover {
