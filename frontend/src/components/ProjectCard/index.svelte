@@ -6,55 +6,76 @@
 		id: string;
 		title: string;
 		overview: string;
+		supporting: string[];
 		activeIndex: string;
 	}
 
-	let { id, title, overview, activeIndex }: Props = $props();
+	let { id, title, overview, supporting, activeIndex }: Props = $props();
 
+	const imgSrc = `/assets/${id}/hero.gif`;
 	const offset = 0;
-	const jitter = 90;
-	const count = 6;
+	const jitter = 100;
+
 	const delay = 60; // ms between items
 	const duration = 300; // ms per item
-	const step = 360 / count;
+
+	const step = supporting.length > 0 ? 360 / supporting.length : 1;
 
 	let imageWidth = $state(0);
 	let imageHeight = $derived((imageWidth * 9) / 16);
+	let containerWidth = $state(0);
+	let containerHeight = $state(0);
 
-	const R = $derived(Math.max(imageWidth, imageHeight) / 2 + offset);
+	const R = $derived(Math.max(containerWidth, containerHeight) * 0.5 + offset);
 
 	let isActive = $derived(activeIndex === id);
 
-	const rFor = (i: number) => R + (jitter ? (Math.random() * 2 - 1) * jitter : 0);
+	const rFor = (i: number) => R; //+ (jitter ? (Math.random() * 2 - 1) * jitter : 0)
 	const open = () => goto(`/project/${id}`);
+
+	let imgDim: { width: number; height: number }[] = $derived(
+		supporting.map(() => ({
+			width: imageWidth * 0.55,
+			height: 0
+		}))
+	);
+
+	$inspect(imgDim);
 </script>
 
-<div class="pointer-events-none absolute inset-0 z-0">
-	{#each Array.from({ length: count }) as _, i}
-		{#if isActive}
-			<div
-				in:fade={{ delay: i * delay, duration }}
-				class="absolute top-1/2 left-1/2 z-0 border-[0.5px] border-solid border-black"
-				style={`width:${imageWidth * 0.75}px; height:${imageHeight * 0.75}px;
-                transform: translate(-50%,-50%)
-                           rotate(${i * step}deg)
-                           translate(${rFor(i)}px)
-                           rotate(${-i * step}deg);`}
-			></div>
-		{/if}
-	{/each}
-</div>
-
+{#if supporting.length > 0}
+	<div class="pointer-events-none absolute inset-0 z-0">
+		{#each supporting as src, i}
+			{#if isActive}
+				<img
+					in:fade={{ delay: (i + 1) * delay, duration }}
+					src={`/assets/${id}/${src}`}
+					class="absolute top-1/2 left-1/2 z-0 h-auto"
+					alt="gif showcasing project demo"
+					style:width="{imageWidth * 0.55}px"
+					style:transform={`translate(-50%,-50%) rotate(${i * step}deg) translate(${rFor(i)}px) rotate(${-i * step}deg)`}
+				/>
+			{/if}
+		{/each}
+	</div>
+{/if}
 <div
 	id={`project-${id}`}
-	class="absolute z-10 flex h-full w-full flex-col justify-around gap-3 bg-white p-3"
+	class="absolute z-10 flex h-full w-full flex-col justify-around bg-white p-3"
 	style:background-image="var(--dashed-border)"
 	role="link"
 	tabindex="0"
 	onclick={() => open()}
 	onkeydown={(e) => e.key === 'Enter' && open()}
+	bind:clientHeight={containerHeight}
+	bind:clientWidth={containerWidth}
 >
-	<div class="w-full bg-black" bind:clientWidth={imageWidth} style:height="{imageHeight}px"></div>
+	<img
+		src={imgSrc}
+		class="h-auto w-full"
+		alt="gif showcasing project demo"
+		bind:clientWidth={imageWidth}
+	/>
 	<div class="flex flex-col">
 		<div class="text-base font-bold uppercase">{title}</div>
 		<div class="text-xs">{overview}</div>

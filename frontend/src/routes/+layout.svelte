@@ -36,6 +36,8 @@
 	];
 
 	const name = ['SOUMYA', 'KARWA'];
+
+	let containerWidth: number = $state(0);
 </script>
 
 <svelte:head>
@@ -43,7 +45,7 @@
 </svelte:head>
 
 <div class="relative flex h-screen w-screen flex-row gap-2 p-6">
-	<div class="absolute top-[0.75rem] right-[2.3rem] flex flex-row gap-[8px]">
+	<div class="absolute top-[0.75rem] right-[2.3rem] z-10 flex flex-row gap-[8px]">
 		{#each name as word}
 			<div class="flex flex-row">
 				{#each word.split('') as letter}
@@ -57,7 +59,22 @@
 		<Navbar links={socialLinks} textClass={'text-xs'} />
 	</div>
 
-	<div class="h-full w-full overflow-y-auto p-6" style="background-image:var(--dashed-border)">
+	<div
+		class="h-full w-full overflow-y-auto p-6"
+		style="background-image:var(--dashed-border)"
+		bind:clientWidth={containerWidth}
+	>
+		<!-- <div transition:fade> -->
 		{@render children?.()}
+		<!-- </div> -->
 	</div>
+
+	<div
+		class="absolute right-6 bottom-6 mr-[0.5px] mb-[0.5px] ml-[0.5px] h-1/20 bg-gradient-to-t from-white to-transparent"
+		style:width="{containerWidth - 1}px"
+	></div>
+	<div
+		class="absolute top-6 right-6 mt-[0.5px] mr-[0.5px] ml-[0.5px] h-1/50 bg-gradient-to-b from-white to-transparent"
+		style:width="{containerWidth - 1}px"
+	></div>
 </div>

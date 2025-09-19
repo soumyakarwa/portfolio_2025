@@ -1,15 +1,16 @@
 <script lang="ts">
 	import ProjectCard from '../components/ProjectCard/index.svelte';
 	import Projects from '$lib/assets/projects/content.json';
+	import { fade } from 'svelte/transition';
 
 	const COL_SPAN = 8;
-	const ROW_SPAN = 5;
+	const ROW_SPAN = 6;
 
 	let active = $state(-1);
 	let activeProject = $state('');
 </script>
 
-<div class="grid h-full w-full grid-cols-24 grid-rows-12">
+<div class="grid h-full w-full grid-cols-24 grid-rows-14" transition:fade>
 	{#each Projects as project, i}
 		<div
 			role="button"
@@ -36,6 +37,7 @@
 				id={project.id}
 				title={project.title}
 				overview={project.overview}
+				supporting={project.supporting}
 				activeIndex={activeProject}
 			/>
 		</div>
