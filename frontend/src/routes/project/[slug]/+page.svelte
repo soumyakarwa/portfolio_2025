@@ -3,10 +3,16 @@
 	import type { PageProps } from './$types';
 
 	let { data }: PageProps = $props();
+
+	let container: HTMLElement | null | undefined = $state();
+	$inspect(container?.getBoundingClientRect().top);
 </script>
 
-<div class="flex flex-col gap-6" transition:fade>
-	<div class="text-base font-bold uppercase">{data.title}</div>
+<div class="flex flex-col gap-6" transition:fade bind:this={container}>
+	<div class="flex flex-row justify-between">
+		<div class="text-base font-bold uppercase">{data.title}</div>
+		<div class="text-base font-bold uppercase">0%</div>
+	</div>
 	{#if data.paragraphs}
 		<div class="flex flex-col gap-9">
 			{#each data.paragraphs as para, i}

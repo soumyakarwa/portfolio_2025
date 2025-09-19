@@ -3,6 +3,7 @@
 	import { page } from '$app/state';
 	import '../app.css';
 	import favicon from '$lib/assets/favicon.svg';
+	import { writable } from 'svelte/store';
 
 	let { children } = $props();
 
@@ -40,15 +41,12 @@
 
 	let containerWidth: number = $state(0);
 
-	$inspect(page.route.id?.startsWith('/project'));
-
 	let projectLinks = $derived(
 		page.data?.paragraphs?.map((p: { title: string; href: string }) => ({
 			label: p.href ? p.href : p.title,
 			href: p.href ? `#${p.href}` : `#${p.title.toLowerCase().replace(/\s+/g, '-')}`
 		})) ?? null
 	);
-	$inspect(projectLinks);
 </script>
 
 <svelte:head>
