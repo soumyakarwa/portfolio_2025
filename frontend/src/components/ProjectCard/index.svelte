@@ -39,8 +39,6 @@
 			height: 0
 		}))
 	);
-
-	$inspect(imgDim);
 </script>
 
 {#if supporting.length > 0}

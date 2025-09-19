@@ -15,7 +15,11 @@
 <div class="flex flex-col items-end justify-center">
 	{#each links as link}
 		<a
-			class={['p-[0.1rem] uppercase', textClass, page.url.pathname === link.href ? 'active' : '']}
+			class={[
+				'p-[0.1rem] text-right uppercase',
+				textClass,
+				page.url.hash === link.href ? 'active' : ''
+			]}
 			href={link.href}>{link.label}</a
 		>
 	{/each}

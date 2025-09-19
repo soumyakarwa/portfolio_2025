@@ -10,7 +10,10 @@
 	{#if data.paragraphs}
 		<div class="flex flex-col gap-9">
 			{#each data.paragraphs as para, i}
-				<div class="flex flex-row gap-9">
+				<div
+					id={para.href ? para.href : para.title.toLowerCase().replace(/\s+/g, '-')}
+					class="flex scroll-mt-6 flex-row gap-9"
+				>
 					<div class="flex w-1/3 flex-col gap-[2px]">
 						<div class="text-xs font-bold uppercase">{@html para.title}</div>
 						<div class="text-xs">{@html para.content}</div>

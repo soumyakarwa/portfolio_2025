@@ -30,7 +30,7 @@
 			},
 			{
 				"title": "Description",
-				"content": "From when I first saw Brooklyn Nine-Nine, I’ve probably rewatched the show ten times over. I’ve always wondered what made the show so special. What about this show makes me revisit it over and over? Was it the wacky cold opens, dark humor, or clunky screenwriting? Then I realized it had to be the characters.<br><br>Each episode tells a different story, but what’s beautiful about this show is how character relationships transcend their circumstances and challenges. How Jake and Amy navigate their relationship despite all the hurdles or how Gina and Captain Holt develop an unlikely friendship, Brooklyn Nine-Nine’s character relationships make the precinct feel like a real, albeit dysfunctional, family—like life itself.<br><br>In the spirit of the Jimmy Jab Games, I set out to find the most iconic duo in Brooklyn Nine-Nine. Which character duo is most beloved by the viewers, without whom Brooklyn Nine-Nine would not be the same?`",
+				"content": "From when I first saw Brooklyn Nine-Nine, I’ve probably rewatched the show ten times over. I’ve always wondered what made the show so special. What about this show makes me revisit it over and over? Was it the wacky cold opens, dark humor, or clunky screenwriting? Then I realized it had to be the characters.<br><br>Each episode tells a different story, but what’s beautiful about this show is how character relationships transcend their circumstances and challenges. How Jake and Amy navigate their relationship despite all the hurdles or how Gina and Captain Holt develop an unlikely friendship, Brooklyn Nine-Nine’s character relationships make the precinct feel like a real, albeit dysfunctional, family—like life itself.<br><br>In the spirit of the Jimmy Jab Games, I set out to find the most iconic duo in Brooklyn Nine-Nine. Which character duo is most beloved by the viewers, without whom Brooklyn Nine-Nine would not be the same?",
 				"images": [
 					{
 						"type": "image",
@@ -50,6 +50,7 @@
 			},
 			{
 				"title": "What do you mean by iconicness?",
+				"href": "iconicness",
 				"content": "First, I needed to narrow down what I was trying to find. I knew I wanted to identify the most iconic duo, but this begs the question: What defines iconicness? Mind maps help me visualize my thoughts, so I started there.<br><br>After many questions and thought spirals, I measured iconicness with popularity. On IMDb, every Brooklyn Nine-Nine episode's rating is calculated as the average of ratings received from a certain number of votes. Using this metric, I can assign the episode's rating to each character pair/group in that episode.<br><br>For instance, if Jake and Amy are paired in an episode with an average rating of 8.9/10, I could assume their duo was partially responsible for this rating. This helps me compare the ratings of different pairs/groups throughout the show.",
 				"images": [
 					{
@@ -80,6 +81,7 @@
 			},
 			{
 				"title": "Generative AI & linguistics",
+				"href": "GenAI & Linguistics",
 				"content": "The Natural Language Toolkit (NLTK) was extremely useful for splitting paragraphs into sentences and identifying specific characters amongst sentences. However, I found many sentences with multiple plot points. I needed to further split the sentences into independent clauses to identify distinct plot points (to identify distinct character groups).<br><br>I use Generative AI in my daily workflow: to boost productivity, as a template and even as a debugging tool. I read a lot about how Generative AI can identify sentence structures (syntax). While NLTK can assign words to a part of speech, I needed to split up sentences into clauses. For that I needed GenAI to understand text meaning to correctly identify an independent clause.<br><br>After testing my idea with ChatGPT, I used Generative AI through the OpenAI API to breakdown complex sentences (from the Wikipedia Episode Descriptions) into independent clauses.",
 				"images": [
 					{
@@ -109,30 +111,6 @@
 				]
 			},
 			{
-				"title": "Data analysis",
-				"content": "Using the Natural Language Toolkit and OpenAI API, I broke down every episode's description into sentences and clauses to identify different storylines. Then, I compared these storylines to a list of main characters to uncover which characters were grouped in the episode. I compared results from all three episode descriptions to ensure accuracy.<br><br>Once the analysis was complete for all episodes (all descriptions), I calculated the weighted average rating for the top ten most frequently appearing character duos. This accounted for the number of votes each episode got, not just the rating. So, for every character duo, I calculated the weighted average by dividing the sum of the product of episode rating and votes by the total number of votes.<br><br>Ultimately, the duo with the highest weighted average rating was the Most Iconic Brooklyn Nine-Nine Duo!",
-				"images": [
-					{
-						"type": "image",
-						"src": "cdDataAnalysis.jpg"
-					}
-				]
-			},
-			{
-				"title": "Design choices",
-				"content": "No matter the case, each Brooklyn Nine-Nine episode always has a murder board, complete with pictures of perps, newspaper clippings, maps, stickies, and, of course, colorful yarn tying everything together.<br><br>I chose a similar theme, except with a digital flair. I designed a dot board with haphazard sticky–note divs. Sticky notes were pinned to the whiteboard using ellipses impersonating thumb–pins and connected using solid yellow lines. I chose Yellow to retain the Brooklyn Nine-Nine branding.<br><br>I animated the lines to create an in-motion, connected effect.",
-				"images": [
-					{
-						"type": "image",
-						"src": "case-board1.jpeg"
-					},
-					{
-						"type": "image",
-						"src": "hero.gif"
-					}
-				]
-			},
-			{
 				"title": "Design choices",
 				"content": "No matter the case, each Brooklyn Nine-Nine episode always has a murder board, complete with pictures of perps, newspaper clippings, maps, stickies, and, of course, colorful yarn tying everything together.<br><br>I chose a similar theme, except with a digital flair. I designed a dot board with haphazard sticky–note divs. Sticky notes were pinned to the whiteboard using ellipses impersonating thumb–pins and connected using solid yellow lines. I chose Yellow to retain the Brooklyn Nine-Nine branding.<br><br>I animated the lines to create an in-motion, connected effect.",
 				"images": [
@@ -148,6 +126,7 @@
 			},
 			{
 				"title": "Introductory section",
+				"href": "Introduction",
 				"content": "The visual essay started with context about the show, introducing the main characters and my love for it.",
 				"images": [
 					{
@@ -158,6 +137,7 @@
 			},
 			{
 				"title": "Language analysis section",
+				"href": "Language analysis",
 				"content": "To explain the language analysis, I designed a section to take readers through my thoughts, step-by-step. I explain how each episode’s description is broken down into different storylines (through sentences and clauses) and subsequently analyzed for distinct character groups.<br><br>Each episode is represented by a square which would be divided into the number of distinct character groups or pairings the episode had once the analysis is complete.",
 				"images": [
 					{
@@ -186,7 +166,7 @@
 				"images": [
 					{
 						"type": "image",
-						"src": "b99.gif"
+						"src": "hero.gif"
 					},
 					{
 						"type": "image",

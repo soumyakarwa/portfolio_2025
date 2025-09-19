@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Navbar from '../components/Navbar/index.svelte';
+	import { page } from '$app/state';
 	import '../app.css';
 	import favicon from '$lib/assets/favicon.svg';
 
@@ -38,6 +39,16 @@
 	const name = ['SOUMYA', 'KARWA'];
 
 	let containerWidth: number = $state(0);
+
+	$inspect(page.route.id?.startsWith('/project'));
+
+	let projectLinks = $derived(
+		page.data?.paragraphs?.map((p: { title: string; href: string }) => ({
+			label: p.href ? p.href : p.title,
+			href: p.href ? `#${p.href}` : `#${p.title.toLowerCase().replace(/\s+/g, '-')}`
+		})) ?? null
+	);
+	$inspect(projectLinks);
 </script>
 
 <svelte:head>
@@ -54,23 +65,24 @@
 			</div>
 		{/each}
 	</div>
-	<div class="w-max-content items-between flex h-full flex-col justify-between">
+	<div class="items-between flex h-full w-1/12 flex-col justify-between">
 		<Navbar {links} textClass={'text-uppercase text-base'} />
+		{#if projectLinks}
+			<Navbar links={projectLinks} textClass={'text-xs'} />
+		{/if}
 		<Navbar links={socialLinks} textClass={'text-xs'} />
 	</div>
 
 	<div
-		class="h-full w-full overflow-y-auto p-6"
+		class="h-full w-full overflow-y-auto scroll-smooth p-6"
 		style="background-image:var(--dashed-border)"
 		bind:clientWidth={containerWidth}
 	>
-		<!-- <div transition:fade> -->
 		{@render children?.()}
-		<!-- </div> -->
 	</div>
 
 	<div
-		class="absolute right-6 bottom-6 mr-[0.5px] mb-[0.5px] ml-[0.5px] h-1/20 bg-gradient-to-t from-white to-transparent"
+		class="absolute right-6 bottom-6 mr-[0.5px] mb-[0.75px] ml-[0.5px] h-1/20 bg-gradient-to-t from-white to-transparent"
 		style:width="{containerWidth - 1}px"
 	></div>
 	<div
