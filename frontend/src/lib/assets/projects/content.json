@@ -98,16 +98,6 @@
 				]
 			},
 			{
-				"title": "Data collection",
-				"content": "I used an existing dataset (containing information about every episode, including episode description, IMDb rating, votes, title, season, etc.) and scraped two additional episode descriptions from Wikipedia and WikiFandom to strengthen the analysis.",
-				"images": [
-					{
-						"type": "image",
-						"src": "cdDataCollection.jpg"
-					}
-				]
-			},
-			{
 				"title": "Data analysis",
 				"href": null,
 				"content": "Using the Natural Language Toolkit and OpenAI API, I broke down every episode's description into sentences and clauses to identify different storylines. Then, I compared these storylines to a list of main characters to uncover which characters were grouped in the episode. I compared results from all three episode descriptions to ensure accuracy.<br><br>Once the analysis was complete for all episodes (all descriptions), I calculated the weighted average rating for the top ten most frequently appearing character duos. This accounted for the number of votes each episode got, not just the rating. So, for every character duo, I calculated the weighted average by dividing the sum of the product of episode rating and votes by the total number of votes.<br><br>Ultimately, the duo with the highest weighted average rating was the Most Iconic Brooklyn Nine-Nine Duo!",
@@ -237,7 +227,7 @@
 			},
 			{
 				"title": "What is the state of the union address?",
-				"href": null,
+				"href": "Union address",
 				"content": "The State of the Union address is a yearly speech delivered by the President of the United States to Congress. It outlines the nation's condition in the past year and sets forth the legislative agenda for the following year.",
 				"images": []
 			},
@@ -254,7 +244,7 @@
 			},
 			{
 				"title": "Initial sketches",
-				"href": null,
+				"href": "Sketches",
 				"content": "To effectively display over 100 data points in a way that emphasizes comparison without overwhelming the viewer, I opted for a radial bar chart. This design allows for an intuitive visual comparison of categories, as longer bars stand out prominently against shorter ones, clearly depicting differences without the need for specific numerical values. I thought this would simplify the viewer's experience by focusing on relative magnitudes rather than precise data.",
 				"images": [
 					{
@@ -269,7 +259,7 @@
 			},
 			{
 				"title": "Final designs",
-				"href": null,
+				"href": "Designs",
 				"content": null,
 				"images": [
 					{
@@ -318,13 +308,13 @@
 			},
 			{
 				"title": "What is the Parsons Benefit?",
-				"href": null,
+				"href": "Parsons benefit",
 				"content": "The Parsons Benefit is an annual celebration of the transformational role fashion, design, and the arts play in today’s world. The evening highlights the work of Parsons Fashion and Textile students. It gathers an esteemed assembly of industry leaders, Parsons alumni, and other luminaries from the Parsons global network to recognize the Parsons Table Award recipients. On the occasion of the 75<sup>th</sup> Annual Parsons Benefit, we designed the branding, graphics, animation, and overall visual identity for the Parsons Benefit.",
 				"images": []
 			},
 			{
 				"title": "Animation Video",
-				"href": null,
+				"href": "Animation",
 				"content": "I created an animation using p5.js to align with the logo designed by Aparna. The animation features curvy lines that move in a fluid, oscillating pattern achieved through sine waves, creating a dynamic and engaging background. I wanted the line effect to be organic and similar to the shadowy lines under “BENEFIT.”<br><br>Additionally, I incorporated increasing stroke widths in each section of the lines, resulting in a gradient effect that enhanced the visual depth and appeal of the animation.",
 				"images": [
 					{
@@ -335,7 +325,7 @@
 			},
 			{
 				"title": "Live at Parsons Benefit",
-				"href": null,
+				"href": "Live",
 				"content": null,
 				"images": []
 			}

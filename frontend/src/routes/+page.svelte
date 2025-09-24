@@ -1,5 +1,5 @@
 <script lang="ts">
-	import ProjectCard from '../components/ProjectCard/index.svelte';
+	import ProjectCard from '$lib/components/ProjectCard/index.svelte';
 	import Projects from '$lib/assets/projects/content.json';
 
 	const COL_SPAN = 8;

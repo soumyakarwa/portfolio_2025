@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/state';
+	import { activeId } from '$lib/components/Util/index';
 
 	interface Props {
 		links: {
@@ -18,7 +19,7 @@
 			class={[
 				'p-[0.1rem] text-right uppercase',
 				textClass,
-				page.url.hash === link.href ? 'active' : ''
+				page.route.id === link.href || `#${$activeId}` == link.href ? 'active' : ''
 			]}
 			href={link.href}>{link.label}</a
 		>
@@ -36,7 +37,7 @@
 	}
 
 	a.active {
-		font-weight: 700;
+		font-weight: 800;
 	}
 
 	a.active:hover {

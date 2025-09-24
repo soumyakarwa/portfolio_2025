@@ -1,9 +1,9 @@
 <script lang="ts">
-	import Navbar from '../components/Navbar/index.svelte';
+	import Navbar from '$lib/components/Navbar/index.svelte';
 	import { page } from '$app/state';
 	import '../app.css';
 	import favicon from '$lib/assets/favicon.svg';
-	import { writable } from 'svelte/store';
+	import { scrollY } from '$lib/components/Util/index';
 
 	let { children } = $props();
 
@@ -44,9 +44,16 @@
 	let projectLinks = $derived(
 		page.data?.paragraphs?.map((p: { title: string; href: string }) => ({
 			label: p.href ? p.href : p.title,
-			href: p.href ? `#${p.href}` : `#${p.title.toLowerCase().replace(/\s+/g, '-')}`
+			href: p.href
+				? `#${p.href.toLowerCase().replace(/\s+/g, '-')}`
+				: `#${p.title.toLowerCase().replace(/\s+/g, '-')}`
 		})) ?? null
 	);
+
+	const onScroll = (e: Event) => {
+		const el = e.currentTarget as HTMLElement;
+		scrollY.set(el.scrollTop);
+	};
 </script>
 
 <svelte:head>
@@ -74,7 +81,7 @@
 	<div
 		class="h-full w-full overflow-y-auto scroll-smooth p-6"
 		style="background-image:var(--dashed-border)"
-		bind:clientWidth={containerWidth}
+		onscroll={onScroll}
 	>
 		{@render children?.()}
 	</div>
