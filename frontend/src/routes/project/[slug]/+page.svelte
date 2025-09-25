@@ -15,9 +15,7 @@
 		}))
 	);
 
-	onMount(async () => {
-		await tick();
-
+	const setParasY = () => {
 		paras.forEach((p, i) => {
 			if (!p?.node) return;
 
@@ -33,6 +31,11 @@
 				}
 			}
 		});
+	};
+
+	onMount(async () => {
+		await tick();
+		setParasY();
 	});
 
 	$effect(() => {
@@ -43,6 +46,8 @@
 		});
 	});
 </script>
+
+<svelte:window onresize={() => setParasY()} />
 
 <div class="relative flex flex-col gap-6" transition:fade bind:this={container}>
 	<div class="max-w-content fixed flex flex-col gap-1 p-1">

@@ -1,6 +1,7 @@
 <script lang="ts">
-	import { fade, fly } from 'svelte/transition';
+	import { fade } from 'svelte/transition';
 	import { goto } from '$app/navigation';
+	import { isDesktop } from '$lib/components/Util/index';
 
 	interface Props {
 		id: string;
@@ -22,7 +23,8 @@
 	const step = supporting.length > 0 ? 360 / supporting.length : 1;
 
 	let imageWidth = $state(0);
-	let imageHeight = $derived((imageWidth * 9) / 16);
+	let imageHeight = $state(0);
+	// let imageHeight = $derived((imageWidth * 9) / 16);
 	let containerWidth = $state(0);
 	let containerHeight = $state(0);
 
@@ -41,7 +43,7 @@
 	);
 </script>
 
-{#if supporting.length > 0}
+{#if supporting.length > 0 && $isDesktop}
 	<div class="pointer-events-none absolute inset-0 z-0">
 		{#each supporting as src, i}
 			{#if isActive}
@@ -59,7 +61,7 @@
 {/if}
 <div
 	id={`project-${id}`}
-	class="absolute z-10 flex h-full w-full flex-col justify-around bg-white p-3"
+	class="z-10 flex h-full w-full flex-col justify-around gap-1 bg-white p-3 lg:absolute"
 	style:background-image="var(--dashed-border)"
 	role="link"
 	tabindex="0"
@@ -67,15 +69,17 @@
 	onkeydown={(e) => e.key === 'Enter' && open()}
 	bind:clientHeight={containerHeight}
 	bind:clientWidth={containerWidth}
+	style:min-height="{imageHeight}px"
 >
 	<img
 		src={imgSrc}
 		class="h-auto w-full"
 		alt="gif showcasing project demo"
 		bind:clientWidth={imageWidth}
+		bind:clientHeight={imageHeight}
 	/>
-	<div class="flex flex-col">
-		<div class="text-base font-bold uppercase">{title}</div>
-		<div class="text-xs">{overview}</div>
-	</div>
+	<!-- <div class="flex flex-col"> -->
+	<div class="text-base font-bold uppercase">{title}</div>
+	<!-- <div class="text-xs">{overview}</div> -->
+	<!-- </div> -->
 </div>

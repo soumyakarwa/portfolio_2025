@@ -3,7 +3,7 @@
 	import { page } from '$app/state';
 	import '../app.css';
 	import favicon from '$lib/assets/favicon.svg';
-	import { scrollY, isMenuOpen } from '$lib/components/Util/index';
+	import { scrollY, isMenuOpen, isDesktop } from '$lib/components/Util/index';
 
 	let { children } = $props();
 
@@ -40,7 +40,7 @@
 	const name = ['SOUMYA', 'KARWA'];
 
 	let containerWidth: number = $state(0);
-	// export const isMenuOpen = writable(false);
+	let screenWidth: number = $state(0);
 
 	let projectLinks = $derived(
 		page.data?.paragraphs?.map((p: { title: string; href: string }) => ({
@@ -55,16 +55,22 @@
 		const el = e.currentTarget as HTMLElement;
 		scrollY.set(el.scrollTop);
 	};
+
+	$effect(() => {
+		isDesktop.set(screenWidth >= 1024);
+	});
 </script>
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
+<svelte:window bind:innerWidth={screenWidth} />
+
 <div class="relative flex h-screen w-screen flex-row gap-2 p-6">
 	<button
 		type="button"
-		class="absolute top-6 left-6 z-20 flex translate-x-1/2 -translate-y-1/2 cursor-pointer flex-col gap-[3px] bg-white lg:hidden"
+		class="absolute top-6 left-6 z-60 flex translate-x-1/2 -translate-y-1/2 cursor-pointer flex-col gap-[3px] bg-white lg:hidden"
 		style="background-image:var(--dashed-border)"
 		aria-expanded={$isMenuOpen}
 		aria-controls="primary-nav"
@@ -101,9 +107,9 @@
 	<div
 		id="primary-nav"
 		class={[
-			'items-between absolute top-6 left-6 z-10 min-h-1/2 w-1/2 flex-col gap-3 bg-white p-6 transition-all duration-200 ease-linear',
+			'items-between absolute top-6 left-6 min-h-1/2 w-1/2 flex-col gap-3 bg-white p-6 transition-all duration-200 ease-linear',
 			'lg:static lg:flex lg:h-full lg:w-1/12 lg:translate-y-0 lg:justify-between lg:p-0 lg:opacity-100',
-			$isMenuOpen ? 'flex translate-y-0 opacity-100' : '-translate-y-6 opacity-0'
+			$isMenuOpen ? 'z-50 flex translate-y-0 opacity-100' : 'z-0 -translate-y-6 opacity-0'
 		]}
 		class:dashed-border={$isMenuOpen}
 	>
