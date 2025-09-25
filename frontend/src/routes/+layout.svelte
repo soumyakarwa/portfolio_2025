@@ -3,7 +3,7 @@
 	import { page } from '$app/state';
 	import '../app.css';
 	import favicon from '$lib/assets/favicon.svg';
-	import { scrollY } from '$lib/components/Util/index';
+	import { scrollY, isMenuOpen } from '$lib/components/Util/index';
 
 	let { children } = $props();
 
@@ -40,7 +40,7 @@
 	const name = ['SOUMYA', 'KARWA'];
 
 	let containerWidth: number = $state(0);
-	let isMenuOpen = $state(false);
+	// export const isMenuOpen = writable(false);
 
 	let projectLinks = $derived(
 		page.data?.paragraphs?.map((p: { title: string; href: string }) => ({
@@ -64,18 +64,30 @@
 <div class="relative flex h-screen w-screen flex-row gap-2 p-6">
 	<button
 		type="button"
-		class="absolute top-6 left-6 z-20 flex translate-x-1/2 -translate-y-1/2 cursor-pointer flex-col gap-[3px] p-1 lg:hidden"
+		class="absolute top-6 left-6 z-20 flex translate-x-1/2 -translate-y-1/2 cursor-pointer flex-col gap-[3px] bg-white lg:hidden"
 		style="background-image:var(--dashed-border)"
-		aria-expanded={isMenuOpen}
+		aria-expanded={$isMenuOpen}
 		aria-controls="primary-nav"
-		aria-label={isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
-		onclick={() => (isMenuOpen = !isMenuOpen)}
+		aria-label={$isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+		onclick={() => isMenuOpen.set(!$isMenuOpen)}
 	>
-		<!-- <span class="block h-0.5 w-6 bg-black"></span>
-		<span class="block h-0.5 w-6 bg-black"></span>
-		<span class="block h-0.5 w-6 bg-black"></span> -->
-		<span class="material-symbols-outlined">Menu</span>
+		<span
+			class="material-symbols-outlined pointer-events-none absolute inset-0 grid place-items-center
+           transition-all duration-200 ease-out
+           [@media(prefers-reduced-motion:reduce)]:transition-none
+           {$isMenuOpen ? 'scale-90 rotate-90 opacity-0' : 'scale-100 rotate-0 opacity-100'}"
+			aria-hidden="true">menu</span
+		>
+		<!-- close (X) -->
+		<span
+			class="material-symbols-outlined pointer-events-none grid place-items-center
+           transition-all duration-200 ease-out
+           [@media(prefers-reduced-motion:reduce)]:transition-none
+           {$isMenuOpen ? 'scale-100 rotate-0 opacity-100' : 'scale-90 -rotate-90 opacity-0'}"
+			aria-hidden="true">close</span
+		>
 	</button>
+
 	<div class="absolute top-[0.75rem] right-[2.3rem] z-10 flex flex-row gap-[8px]">
 		{#each name as word}
 			<div class="flex flex-row">
@@ -88,10 +100,12 @@
 
 	<div
 		id="primary-nav"
-		class="items-between absolute top-6 left-6 z-10 min-h-1/2 w-1/2 flex-col gap-3 bg-white p-6 lg:static lg:flex lg:h-full lg:w-1/12 lg:justify-between lg:p-0"
-		class:dashed-border={isMenuOpen}
-		class:hidden={!isMenuOpen}
-		class:flex={isMenuOpen}
+		class={[
+			'items-between absolute top-6 left-6 z-10 min-h-1/2 w-1/2 flex-col gap-3 bg-white p-6 transition-all duration-200 ease-linear',
+			'lg:static lg:flex lg:h-full lg:w-1/12 lg:translate-y-0 lg:justify-between lg:p-0 lg:opacity-100',
+			$isMenuOpen ? 'flex translate-y-0 opacity-100' : '-translate-y-6 opacity-0'
+		]}
+		class:dashed-border={$isMenuOpen}
 	>
 		<Navbar {links} textClass={'text-uppercase text-base'} />
 		{#if projectLinks}

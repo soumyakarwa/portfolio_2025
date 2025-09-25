@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/state';
-	import { activeId } from '$lib/components/Util/index';
+	import { activeId, isMenuOpen } from '$lib/components/Util/index';
 
 	interface Props {
 		links: {
@@ -11,6 +11,8 @@
 	}
 
 	const { links, textClass }: Props = $props();
+
+	//
 </script>
 
 <div class="flex flex-col items-start justify-center lg:items-end">
@@ -21,7 +23,8 @@
 				textClass,
 				page.route.id === link.href || `#${$activeId}` == link.href ? 'active' : ''
 			]}
-			href={link.href}>{link.label}</a
+			href={link.href}
+			onclick={() => ($isMenuOpen ? isMenuOpen.set(false) : null)}>{link.label}</a
 		>
 	{/each}
 </div>
