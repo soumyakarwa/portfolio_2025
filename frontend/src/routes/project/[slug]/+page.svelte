@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Button from '$lib/components/Button/index.svelte';
 	import { fade } from 'svelte/transition';
 	import type { PageProps } from './$types';
 	import { activeId, scrollY } from '$lib/components/Util/index';
@@ -43,11 +44,21 @@
 	});
 </script>
 
-<div class="flex flex-col gap-6" transition:fade bind:this={container}>
-	<!-- <div class="flex flex-row justify-between"> -->
-	<div class="text-base font-extrabold uppercase">{data.title}</div>
-	<!-- <div class="text-base font-bold uppercase">0%</div>
-	</div> -->
+<div class="relative flex flex-col gap-6" transition:fade bind:this={container}>
+	<div class="max-w-content fixed flex flex-col gap-1 p-1">
+		<div class="bg-white text-base font-extrabold uppercase opacity-100">{data.title}</div>
+		{#if data.href}
+			<Button label={'Demo'} href={data.href}></Button>
+		{/if}
+	</div>
+	<!-- opacity-0 title for positioning -->
+	<div class="flex flex-col gap-1 p-1 opacity-0">
+		<div class="text-base font-extrabold uppercase opacity-100">{data.title}</div>
+		{#if data.href}
+			<Button label={'Demo'} href={data.href}></Button>
+		{/if}
+	</div>
+
 	{#if data.paragraphs}
 		<div class="flex flex-col gap-3 lg:gap-9">
 			{#each data.paragraphs as para, i}
@@ -55,7 +66,7 @@
 					id={para.href
 						? para.href.toLowerCase().replace(/\s+/g, '-')
 						: para.title.toLowerCase().replace(/\s+/g, '-')}
-					class="flex scroll-mt-6 flex-col gap-3 lg:flex-row lg:gap-9"
+					class="flex scroll-mt-24 flex-col gap-3 lg:flex-row lg:gap-9"
 					bind:this={paras[i].node}
 				>
 					<div class="flex w-full flex-col gap-[2px] lg:w-1/3">

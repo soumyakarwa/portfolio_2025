@@ -40,6 +40,7 @@
 	const name = ['SOUMYA', 'KARWA'];
 
 	let containerWidth: number = $state(0);
+	let isMenuOpen = $state(false);
 
 	let projectLinks = $derived(
 		page.data?.paragraphs?.map((p: { title: string; href: string }) => ({
@@ -61,6 +62,20 @@
 </svelte:head>
 
 <div class="relative flex h-screen w-screen flex-row gap-2 p-6">
+	<button
+		type="button"
+		class="absolute top-6 left-6 z-20 flex translate-x-1/2 -translate-y-1/2 cursor-pointer flex-col gap-[3px] p-1 lg:hidden"
+		style="background-image:var(--dashed-border)"
+		aria-expanded={isMenuOpen}
+		aria-controls="primary-nav"
+		aria-label={isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+		onclick={() => (isMenuOpen = !isMenuOpen)}
+	>
+		<!-- <span class="block h-0.5 w-6 bg-black"></span>
+		<span class="block h-0.5 w-6 bg-black"></span>
+		<span class="block h-0.5 w-6 bg-black"></span> -->
+		<span class="material-symbols-outlined">Menu</span>
+	</button>
 	<div class="absolute top-[0.75rem] right-[2.3rem] z-10 flex flex-row gap-[8px]">
 		{#each name as word}
 			<div class="flex flex-row">
@@ -70,7 +85,14 @@
 			</div>
 		{/each}
 	</div>
-	<div class="items-between flex h-full w-1/12 flex-col justify-between">
+
+	<div
+		id="primary-nav"
+		class="items-between absolute top-6 left-6 z-10 min-h-1/2 w-1/2 flex-col gap-3 bg-white p-6 lg:static lg:flex lg:h-full lg:w-1/12 lg:justify-between lg:p-0"
+		class:dashed-border={isMenuOpen}
+		class:hidden={!isMenuOpen}
+		class:flex={isMenuOpen}
+	>
 		<Navbar {links} textClass={'text-uppercase text-base'} />
 		{#if projectLinks}
 			<Navbar links={projectLinks} textClass={'text-xs'} />
@@ -95,3 +117,9 @@
 		style:width="{containerWidth - 1}px"
 	></div>
 </div>
+
+<style>
+	.dashed-border {
+		background-image: var(--dashed-border);
+	}
+</style>

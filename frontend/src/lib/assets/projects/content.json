@@ -2,6 +2,7 @@
 	{
 		"id": "iconic-duo",
 		"title": "The Most Iconic Duo In Brooklyn Nine-Nine",
+		"href": "https://brooklyn-nine-nine-duos.vercel.app/",
 		"overview": "Some overview",
 		"position": [3, 4],
 		"supporting": [
@@ -198,6 +199,7 @@
 	{
 		"id": "echoes-of-conflict",
 		"title": "Echoes of Conflict",
+		"href": "https://soumyakarwa.github.io/echoes-of-conflict/",
 		"overview": "Some overview",
 		"position": [4, 7],
 		"supporting": ["radial.gif", "echoesOfConflict-1.jpg", "echoesOfConflict-2.jpg"],
@@ -273,6 +275,7 @@
 	{
 		"id": "parsons-benefit",
 		"title": "2024 Parsons Benefit",
+		"href": "https://www.youtube.com/watch?v=B4-ECRn2xAs",
 		"overview": "Some overview",
 		"position": [10, 6],
 		"supporting": [],

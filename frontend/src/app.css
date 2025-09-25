@@ -5,6 +5,7 @@
 /* background image https://kovart.github.io/dashed-border-generator/ */
 :root {
 	--dashed-border: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23333' stroke-width='1' stroke-dasharray='5%2c 6' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+	--dashed-border-white: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='white' stroke-width='1' stroke-dasharray='5%2c 6' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
 }
 
 body {
@@ -18,4 +19,12 @@ body {
 @font-face {
 	font-family: 'GeistMono';
 	src: url('./lib/assets/fonts/GeistMono/GeistMonoVariableVF.ttf');
+}
+
+.material-symbols-outlined {
+	font-variation-settings:
+		'FILL' 0,
+		'wght' 400,
+		'GRAD' 0,
+		'opsz' 24;
 }

@@ -13,11 +13,11 @@
 	const { links, textClass }: Props = $props();
 </script>
 
-<div class="flex flex-col items-end justify-center">
+<div class="flex flex-col items-start justify-center lg:items-end">
 	{#each links as link}
 		<a
 			class={[
-				'p-[0.1rem] text-right uppercase',
+				'p-[0.1rem] text-left uppercase lg:text-right',
 				textClass,
 				page.route.id === link.href || `#${$activeId}` == link.href ? 'active' : ''
 			]}
