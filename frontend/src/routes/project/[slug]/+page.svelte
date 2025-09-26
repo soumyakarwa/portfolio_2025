@@ -8,6 +8,7 @@
 	let { data }: PageProps = $props();
 
 	let container: HTMLElement | null | undefined = $state();
+
 	let paras: { node: HTMLElement | null; bounds: number[] }[] = $state(
 		Array.from({ length: data.paragraphs?.length || 0 }, () => ({
 			node: null,

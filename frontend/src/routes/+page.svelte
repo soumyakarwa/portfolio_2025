@@ -1,7 +1,7 @@
 <script lang="ts">
 	import ProjectCard from '$lib/components/ProjectCard/index.svelte';
 	import Projects from '$lib/assets/projects/content.json';
-	import { isDesktop } from '$lib/components/Util/index';
+	import { isDesktop, isGridLayout } from '$lib/components/Util/index';
 
 	const COL_SPAN = 8;
 	const ROW_SPAN = 6;
@@ -11,21 +11,26 @@
 </script>
 
 <div
-	class="grid-rows-auto grid h-full w-full grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-24 lg:grid-rows-14 lg:gap-0"
+	class={[
+		'grid-rows-auto grid w-full grid-cols-1 gap-4 md:grid-cols-2',
+		$isDesktop ? 'h-full' : '',
+		$isGridLayout ? 'lg:grid-cols-3' : 'lg:grid-cols-24 lg:grid-rows-14 lg:gap-0'
+	]}
 >
 	{#each Projects as project, i}
 		<div
 			role="button"
 			tabindex={0}
 			class={[
-				'opacity-100 transition-opacity duration-100 ease-linear hover:cursor-pointer hover:opacity-100 lg:relative lg:opacity-0',
+				'opacity-100 transition-opacity duration-200 ease-linear hover:cursor-pointer hover:opacity-100 lg:relative',
 				$isDesktop && active === i ? 'z-50' : 'z-10',
-				$isDesktop && active !== -1 && active !== i ? 'pointer-events-none' : ''
+				$isDesktop && active !== -1 && active !== i ? 'pointer-events-none' : '',
+				$isGridLayout ? ' lg:opacity-100' : 'lg:opacity-0'
 			]}
-			style:grid-column-start={$isDesktop ? project.position[0] : null}
-			style:grid-column-end={$isDesktop ? project.position[0] + COL_SPAN : null}
-			style:grid-row-start={$isDesktop ? project.position[1] : null}
-			style:grid-row-end={$isDesktop ? project.position[1] + ROW_SPAN : null}
+			style:grid-column-start={!$isGridLayout ? project.position[0] : null}
+			style:grid-column-end={!$isGridLayout ? project.position[0] + COL_SPAN : null}
+			style:grid-row-start={!$isGridLayout ? project.position[1] : null}
+			style:grid-row-end={!$isGridLayout ? project.position[1] + ROW_SPAN : null}
 			onmouseenter={() => {
 				active = i;
 				activeProject = project.id;

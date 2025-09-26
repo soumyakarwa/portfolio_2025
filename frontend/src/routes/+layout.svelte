@@ -1,9 +1,10 @@
 <script lang="ts">
 	import Navbar from '$lib/components/Navbar/index.svelte';
+	import ToggleSwitch from '$lib/components/ToggleSwitch/index.svelte';
 	import { page } from '$app/state';
 	import '../app.css';
 	import favicon from '$lib/assets/favicon.svg';
-	import { scrollY, isMenuOpen, isDesktop } from '$lib/components/Util/index';
+	import { scrollY, isMenuOpen, isDesktop, isGridLayout } from '$lib/components/Util/index';
 
 	let { children } = $props();
 
@@ -41,6 +42,8 @@
 
 	let containerWidth: number = $state(0);
 	let screenWidth: number = $state(0);
+	let checked: boolean = $state(false);
+	// let isGrid: boolean = $derived(checked && $isDesktop);
 
 	let projectLinks = $derived(
 		page.data?.paragraphs?.map((p: { title: string; href: string }) => ({
@@ -58,7 +61,10 @@
 
 	$effect(() => {
 		isDesktop.set(screenWidth >= 1024);
+		isGridLayout.set(!$isDesktop || checked);
 	});
+
+	$inspect($isGridLayout);
 </script>
 
 <svelte:head>
@@ -94,7 +100,7 @@
 		>
 	</button>
 
-	<div class="absolute top-[0.75rem] right-[2.3rem] z-10 flex flex-row gap-[8px]">
+	<div class="absolute top-[0.75rem] right-[2.3rem] z-50 flex flex-row gap-[8px]">
 		{#each name as word}
 			<div class="flex flex-row">
 				{#each word.split('') as letter}
@@ -102,6 +108,9 @@
 				{/each}
 			</div>
 		{/each}
+		{#if $isDesktop}
+			<ToggleSwitch size={'sm'} icon={!checked ? 'web_traffic' : 'tile_small'} bind:checked />
+		{/if}
 	</div>
 
 	<div

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { fade } from 'svelte/transition';
 	import { goto } from '$app/navigation';
-	import { isDesktop } from '$lib/components/Util/index';
+	import { isGridLayout } from '$lib/components/Util/index';
 
 	interface Props {
 		id: string;
@@ -43,7 +43,7 @@
 	);
 </script>
 
-{#if supporting.length > 0 && $isDesktop}
+{#if supporting.length > 0 && !$isGridLayout}
 	<div class="pointer-events-none absolute inset-0 z-0">
 		{#each supporting as src, i}
 			{#if isActive}
@@ -61,7 +61,7 @@
 {/if}
 <div
 	id={`project-${id}`}
-	class="z-10 flex h-full w-full flex-col justify-around gap-1 bg-white p-3 lg:absolute"
+	class="z-10 flex h-auto w-full flex-col justify-around gap-1 bg-white p-3 lg:absolute"
 	style:background-image="var(--dashed-border)"
 	role="link"
 	tabindex="0"
