@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { fade } from 'svelte/transition';
+
 	type ToggleSize = 'sm' | 'md';
 
 	interface Props {
@@ -38,6 +40,7 @@
 </script>
 
 <label
+	transition:fade
 	class={[
 		'group inline-flex items-center gap-3 text-xs font-semibold tracking-[0.08em] uppercase select-none',
 		disabled ? 'cursor-not-allowed opacity-60' : 'cursor-pointer'

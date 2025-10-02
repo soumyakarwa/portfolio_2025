@@ -21,3 +21,12 @@ Thumbs.db
 # Vite
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# Video files
+*.mov
+*.mp4
+*.avi
+*.mkv
+*.wmv
+*.flv
+*.webm

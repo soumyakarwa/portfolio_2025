@@ -1,0 +1,476 @@
+[
+	{
+		"id": "iconic-duo",
+		"title": "The Most Iconic Duo In Brooklyn Nine-Nine",
+		"tag": "Personal",
+		"href": "https://brooklyn-nine-nine-duos.vercel.app/",
+		"position": [3, 3],
+		"supporting": [
+			"characters.gif",
+			"gpt-use.gif",
+			"heatmap2.gif",
+			"case-board1.jpeg",
+			"introImg.jpeg",
+			"breakdown.jpg"
+		],
+		"paragraphs": [
+			{
+				"title": "Role",
+				"href": null,
+				"content": "Designer, Developer, Data Analyst",
+				"images": []
+			},
+			{
+				"title": "Tools & Tech",
+				"href": null,
+				"content": "Photoshop, Figma, Svelte.js, d3.js, NLTK, OpenAI API",
+				"images": []
+			},
+			{
+				"title": "Overview",
+				"href": null,
+				"content": "Designed and developed a visual essay titled “The Most Iconic Duo in Brooklyn Nine-Nine” to identify the most beloved character duo in the sitcom Brooklyn Nine-Nine by analyzing official and unofficial episode descriptions, IMDb ratings, and votes. Honorable mention in the 2024 Pudding Cup, Longlisted in the 2024 Information is Beautiful Awards.",
+				"images": []
+			},
+			{
+				"title": "Description",
+				"href": null,
+				"content": "From when I first saw Brooklyn Nine-Nine, I’ve probably rewatched the show ten times over. I’ve always wondered what made the show so special. What about this show makes me revisit it over and over? Was it the wacky cold opens, dark humor, or clunky screenwriting? Then I realized it had to be the characters.<br><br>Each episode tells a different story, but what’s beautiful about this show is how character relationships transcend their circumstances and challenges. How Jake and Amy navigate their relationship despite all the hurdles or how Gina and Captain Holt develop an unlikely friendship, Brooklyn Nine-Nine’s character relationships make the precinct feel like a real, albeit dysfunctional, family—like life itself.<br><br>In the spirit of the Jimmy Jab Games, I set out to find the most iconic duo in Brooklyn Nine-Nine. Which character duo is most beloved by the viewers, without whom Brooklyn Nine-Nine would not be the same?",
+				"images": [
+					{
+						"type": "image",
+						"src": "introImg.jpeg"
+					}
+				]
+			},
+			{
+				"title": "Timeline",
+				"href": null,
+				"content": "I divided this project into two phases. The first phase focused on Data Collection, Cleaning, and Analysis. The second phase focused on writing the narrative, designing the flow and assets, and coding and deploying the microsite.",
+				"images": [
+					{
+						"type": "image",
+						"src": "timeline.jpg"
+					}
+				]
+			},
+			{
+				"title": "What do you mean by iconicness?",
+				"href": "iconicness",
+				"content": "First, I needed to narrow down what I was trying to find. I knew I wanted to identify the most iconic duo, but this begs the question: What defines iconicness? Mind maps help me visualize my thoughts, so I started there.<br><br>After many questions and thought spirals, I measured iconicness with popularity. On IMDb, every Brooklyn Nine-Nine episode's rating is calculated as the average of ratings received from a certain number of votes. Using this metric, I can assign the episode's rating to each character pair/group in that episode.<br><br>For instance, if Jake and Amy are paired in an episode with an average rating of 8.9/10, I could assume their duo was partially responsible for this rating. This helps me compare the ratings of different pairs/groups throughout the show.",
+				"images": [
+					{
+						"type": "image",
+						"src": "iconicness.jpg"
+					}
+				]
+			},
+			{
+				"title": "Theory",
+				"href": null,
+				"content": "Each episode usually has 3–5 different storylines following changing character groups. I chose to assign the episode’s rating to each character group to measure its popularity with the audience (since it changes with every episode). The question now is: How can I identify the episode’s different character groups?<br><br>The key was through a language analysis. For every episode, Brooklyn Nine–Nine’s production company released an “official” episode description– a short one-paragraph description of the episode’s storylines. By analyzing episode descriptions, I could identify which characters were grouped and correspond these findings with the episode rating. Once the analysis was complete for every episode, I could compare the average rating of character groups in all episodes to narrow down the most “iconic” or popular duo.",
+				"images": [
+					{
+						"type": "image",
+						"src": "breakdown.jpg"
+					}
+				]
+			},
+			{
+				"title": "Data collection",
+				"href": null,
+				"content": "I used an existing dataset (containing information about every episode, including episode description, IMDb rating, votes, title, season, etc.) and scraped two additional episode descriptions from Wikipedia and WikiFandom to strengthen the analysis.",
+				"images": [
+					{
+						"type": "image",
+						"src": "cdDataCollection.jpg"
+					}
+				]
+			},
+			{
+				"title": "Generative AI & linguistics",
+				"href": "GenAI & Linguistics",
+				"content": "The Natural Language Toolkit (NLTK) was extremely useful for splitting paragraphs into sentences and identifying specific characters amongst sentences. However, I found many sentences with multiple plot points. I needed to further split the sentences into independent clauses to identify distinct plot points (to identify distinct character groups).<br><br>I use Generative AI in my daily workflow: to boost productivity, as a template and even as a debugging tool. I read a lot about how Generative AI can identify sentence structures (syntax). While NLTK can assign words to a part of speech, I needed to split up sentences into clauses. For that I needed GenAI to understand text meaning to correctly identify an independent clause.<br><br>After testing my idea with ChatGPT, I used Generative AI through the OpenAI API to breakdown complex sentences (from the Wikipedia Episode Descriptions) into independent clauses.",
+				"images": [
+					{
+						"type": "image",
+						"src": "gpt-use.gif"
+					}
+				]
+			},
+			{
+				"title": "Data analysis",
+				"href": null,
+				"content": "Using the Natural Language Toolkit and OpenAI API, I broke down every episode's description into sentences and clauses to identify different storylines. Then, I compared these storylines to a list of main characters to uncover which characters were grouped in the episode. I compared results from all three episode descriptions to ensure accuracy.<br><br>Once the analysis was complete for all episodes (all descriptions), I calculated the weighted average rating for the top ten most frequently appearing character duos. This accounted for the number of votes each episode got, not just the rating. So, for every character duo, I calculated the weighted average by dividing the sum of the product of episode rating and votes by the total number of votes.<br><br>Ultimately, the duo with the highest weighted average rating was the Most Iconic Brooklyn Nine-Nine Duo!",
+				"images": [
+					{
+						"type": "image",
+						"src": "cdDataAnalysis.jpg"
+					}
+				]
+			},
+			{
+				"title": "Design choices",
+				"href": null,
+				"content": "No matter the case, each Brooklyn Nine-Nine episode always has a murder board, complete with pictures of perps, newspaper clippings, maps, stickies, and, of course, colorful yarn tying everything together.<br><br>I chose a similar theme, except with a digital flair. I designed a dot board with haphazard sticky–note divs. Sticky notes were pinned to the whiteboard using ellipses impersonating thumb–pins and connected using solid yellow lines. I chose Yellow to retain the Brooklyn Nine-Nine branding.<br><br>I animated the lines to create an in-motion, connected effect.",
+				"images": [
+					{
+						"type": "image",
+						"src": "case-board1.jpeg"
+					},
+					{
+						"type": "image",
+						"src": "hero.gif"
+					}
+				]
+			},
+			{
+				"title": "Introductory section",
+				"href": "Introduction",
+				"content": "The visual essay started with context about the show, introducing the main characters and my love for it.",
+				"images": [
+					{
+						"type": "image",
+						"src": "characters.gif"
+					}
+				]
+			},
+			{
+				"title": "Language analysis section",
+				"href": "Language analysis",
+				"content": "To explain the language analysis, I designed a section to take readers through my thoughts, step-by-step. I explain how each episode’s description is broken down into different storylines (through sentences and clauses) and subsequently analyzed for distinct character groups.<br><br>Each episode is represented by a square which would be divided into the number of distinct character groups or pairings the episode had once the analysis is complete.",
+				"images": [
+					{
+						"type": "image",
+						"src": "episodeBreakdownSketch.jpg"
+					}
+				]
+			},
+			{
+				"title": "Finding the duo",
+				"href": null,
+				"content": "Now, the reader has some context for the language analysis and can jump right into the character group comparisons!<br><br>I chose a heat map layout of Seasons against Episodes and, with every step, revealed some additional aspects of the visualization. Starting with the previous episode example, I moved on to all episodes, which turned into a bar chart comparing the number of appearances of the top ten most frequently appearing character duos. With each incremental step, the heat map inches closer to the conclusion: the most iconic duo.<br><br>Stick around to find out!",
+				"images": [
+					{
+						"type": "image",
+						"src": "heatMapSketch1.jpg"
+					},
+					{
+						"type": "image",
+						"src": "heatMapSketch2.jpg"
+					}
+				]
+			},
+			{
+				"title": "Final designs",
+				"href": null,
+				"content": "I loved this project from conception to ideation to design to development. I chose it as my summer project for my love of Brooklyn Nine-Nine, but also to implement my learnings in data visualization in a large scale, continuous project: a visual essay. I drew inspiration from The Pudding and The New York Times– I wanted to emulate the way they tie stories together, revealing things step by step, piece by piece. I learned and implemented so many things I didn’t end up using for instance Scrollytelling and Intersection Observer, but I’m glad I learned them anyway. I’m excited for more projects like these in the future.",
+				"images": [
+					{
+						"type": "image",
+						"src": "hero.gif"
+					},
+					{
+						"type": "image",
+						"src": "characters.gif"
+					},
+					{
+						"type": "image",
+						"src": "episode1.gif"
+					},
+					{
+						"type": "image",
+						"src": "heatmap1.gif"
+					},
+					{
+						"type": "image",
+						"src": "heatmap2.gif"
+					}
+				]
+			},
+			{
+				"title": "Reflection",
+				"href": null,
+				"content": "I loved this project, from conception to ideation to design to development. I chose it as my summer project for my love of Brooklyn Nine-Nine, but also to implement learnings in data visualization in a large-scale, continuous project: a visual essay. I drew inspiration from The Pudding and The New York Times– I wanted to emulate the way they tie stories together, revealing things step by step, piece by piece. I learned and implemented so many things I didn’t end up using, for instance, Scrollytelling and Intersection Observer, but I’m glad I learned them anyway. I’m excited for more projects like these in the future.<br><br>Shoutout to <span class=\"underline\"><a href=\"https://www.connorrothschild.com\" target=\"_blank\">Connor Rothschild</a></span>, <span class=\"underline\" target=\"_blank\"><a href=\"https://www.daniellecarrick.com/\">Danielle Carrick</a></span> and <span class=\"underline\" target=\"_blank\">Michael Hester</span> for their time and expertise to critique this project! Shoutout to <span class=\"underline\"><a href=\"https://justinbakse.com/\" target=\"_blank\">Prof. Justin Bakse</a></span> for his class, \"Javascript+OpenAI\" at Parsons which taught me how to effciently use OpenAI's GPT in projects. Please check my <span class=\"underline\"><a href=\"https://github.com/soumyakarwa/comedy-duos\" target=\"_blank\">Github Repository</a></span> for more detailed sources!",
+				"images": []
+			}
+		]
+	},
+	{
+		"id": "echoes-of-conflict",
+		"title": "Echoes of Conflict",
+		"tag": "Parsons",
+		"href": "https://soumyakarwa.github.io/echoes-of-conflict/",
+		"position": [10, 6],
+		"supporting": ["radial.gif", "echoesOfConflict-1.jpg", "echoesOfConflict-2.jpg"],
+		"paragraphs": [
+			{
+				"title": "Role",
+				"href": null,
+				"content": "Designer, Developer, Data Analyst",
+				"images": []
+			},
+			{
+				"title": "Tools & Tech",
+				"href": null,
+				"content": "d3.js, HTML/CSS, Javascript",
+				"images": []
+			},
+			{
+				"title": "Overview",
+				"href": null,
+				"content": "Created an interactive radial bar chart to illustrate the prevalence of war rhetoric in the State of the Union Addresses over the last century. This data-driven approach provides a revealing look at how war has ebbed and flowed as a subject in the annual addresses to Congress, reflecting the nation's entanglement with international and domestic conflicts over time.",
+				"images": [
+					{
+						"type": "image",
+						"src": "echoesOfConflict.gif"
+					}
+				]
+			},
+			{
+				"title": "What is the state of the union address?",
+				"href": "Union address",
+				"content": "The State of the Union address is a yearly speech delivered by the President of the United States to Congress. It outlines the nation's condition in the past year and sets forth the legislative agenda for the following year.",
+				"images": []
+			},
+			{
+				"title": "Description",
+				"href": null,
+				"content": "\"Echoes of Conflict,\" uses a radial bar chart to depict each year's address, with the bar lengths showing the percentage of the speech dedicated to discussing war. According to the U.S. Department of Veteran Affairs, the U.S. has been involved in five wars in the 20th century: World War I, World War II, Korean War, Vietnam War and the Global War on Terror. I wanted to depict a comparison between the Addresses in war years and non-war years. It is interesting to note that, despite the U.S.'s long involvement in the Vietnam War, the porportion of Addresses dedicated to talking about it is far lesser compared to years of other wars. Maybe it was because of the number of anti-war protests during that time?",
+				"images": [
+					{
+						"type": "image",
+						"src": "radial.gif"
+					}
+				]
+			},
+			{
+				"title": "Initial sketches",
+				"href": "Sketches",
+				"content": "To effectively display over 100 data points in a way that emphasizes comparison without overwhelming the viewer, I opted for a radial bar chart. This design allows for an intuitive visual comparison of categories, as longer bars stand out prominently against shorter ones, clearly depicting differences without the need for specific numerical values. I thought this would simplify the viewer's experience by focusing on relative magnitudes rather than precise data.",
+				"images": [
+					{
+						"type": "image",
+						"src": "echoesOfConflict-1.jpg"
+					},
+					{
+						"type": "image",
+						"src": "echoesOfConflict-2.jpg"
+					}
+				]
+			},
+			{
+				"title": "Final designs",
+				"href": "Designs",
+				"content": null,
+				"images": [
+					{
+						"type": "image",
+						"src": "hero.gif"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": "parsons-benefit",
+		"title": "2024 Parsons Benefit",
+		"tag": "Parsons",
+		"href": "https://www.youtube.com/watch?v=B4-ECRn2xAs",
+		"position": [4, 8],
+		"supporting": [],
+		"paragraphs": [
+			{
+				"title": "Role",
+				"href": null,
+				"content": "Designer, Creative Coder",
+				"images": []
+			},
+			{
+				"title": "Tools & Tech",
+				"href": null,
+				"content": "Figma, p5.js",
+				"images": []
+			},
+			{
+				"title": "Overview",
+				"href": null,
+				"content": "Used p5.js to design and code an animation video in line with the visual identity and branding created by students of Professor Lucille Tenazas’ class, University Design Studio for the 75<sup>th</sup> Annual Parsons Benefit.",
+				"images": []
+			},
+			{
+				"title": "Team",
+				"href": null,
+				"content": "<b>Team lead & professor:</b> Henry Wolf Professor of Communication Design: Lucille Tenazas<br><br><b>Students:</b> Win Bulbon, Soumya Karwa, Da Won Kim, Aarya Kini, Aparna Krishnan Reshmy, Sachi Mavinkurve, Muhammad Talha.<br><br><b>Left to right:</b> Muhammad Talha, Yvonne Watson (Executive Dean of Parsons School of Design), Ben Barry (Dean, School of Fashion), Sachi Mavinkurve, Soumya Karwa, Aparna Krishnan, Win Bulbon",
+				"images": [
+					{
+						"type": "image",
+						"src": "groupPic.jpg"
+					}
+				]
+			},
+			{
+				"title": "What is the Parsons Benefit?",
+				"href": "Parsons benefit",
+				"content": "The Parsons Benefit is an annual celebration of the transformational role fashion, design, and the arts play in today’s world. The evening highlights the work of Parsons Fashion and Textile students. It gathers an esteemed assembly of industry leaders, Parsons alumni, and other luminaries from the Parsons global network to recognize the Parsons Table Award recipients. On the occasion of the 75<sup>th</sup> Annual Parsons Benefit, we designed the branding, graphics, animation, and overall visual identity for the Parsons Benefit.",
+				"images": []
+			},
+			{
+				"title": "Animation Video",
+				"href": "Animation",
+				"content": "I created an animation using p5.js to align with the logo designed by Aparna. The animation features curvy lines that move in a fluid, oscillating pattern achieved through sine waves, creating a dynamic and engaging background. I wanted the line effect to be organic and similar to the shadowy lines under “BENEFIT.”<br><br>Additionally, I incorporated increasing stroke widths in each section of the lines, resulting in a gradient effect that enhanced the visual depth and appeal of the animation.",
+				"images": [
+					{
+						"type": "image",
+						"src": "hero.gif"
+					}
+				]
+			},
+			{
+				"title": "Live at Parsons Benefit",
+				"href": "Live",
+				"content": null,
+				"images": []
+			}
+		]
+	},
+	{
+		"id": "eroding-protections",
+		"title": "Eroding protections",
+		"tag": "Reuters",
+		"href": "https://www.reuters.com/graphics/USA-TRUMP/PUBLIC-LANDS/zdpxkxdwnvx/",
+		"position": [17, 3],
+		"supporting": [],
+		"paragraphs": [
+			{
+				"title": "Role",
+				"href": null,
+				"content": "Designer, Creative Coder, Reporter",
+				"images": []
+			},
+			{
+				"title": "Tools & Tech",
+				"href": null,
+				"content": "Illustrator, SvelteKit, p5.js, d3.js",
+				"images": []
+			},
+			{
+				"title": "Overview",
+				"href": null,
+				"content": "Contributed to Eroding Protections (Reuters), a multimedia investigation into the rollback of U.S. public lands protections. My main responsibility was designing and developing the opening animation. Using the marching squares algorithm in p5.js, I generated dynamic topographic lines that were animated as SVG paths. These paths were synchronized with scrolling via CSS, so that as readers advanced through the story, the drawn lines gradually faded, visually reinforcing the theme of protections eroding from the land itself.",
+				"images": []
+			},
+			{
+				"title": "Team",
+				"href": null,
+				"content": "<b>Graphics reporters:</b> Ally J. Levine, Soumya Karwa, Travis Hartman.<br><b>Editors:</b> Julia Wolfe, Matthew Weber.",
+				"images": []
+			},
+			{
+				"title": "Significance",
+				"href": null,
+				"content": "The Reuters piece *Eroding Protections* documents how U.S. public land protections were reduced under the Trump administration, opening areas to development and weakening conservation rules. Public lands have long had bipartisan support in the U.S., valued for recreation, natural resources, and cultural heritage. The animation visualizes this loss by letting contour lines fade as new paths are drawn, echoing how safeguards that once defined these landscapes are steadily being removed.",
+				"images": []
+			},
+			{
+				"title": "Marching squares x Perlin noise",
+				"href": "Algorithm",
+				"content": "To create the topographic effect, I applied the marching squares algorithm on a Perlin noise field. Perlin noise provided a smoothly varying scalar landscape, which the algorithm converted into contour lines that mimicked elevation maps. I then grouped these lines by their underlying noise values, which allowed me to control each line’s opacity as the draw loop progressed. This gave the animation a layered, ephemeral quality, lines would fade independently rather than all at once, echoing the gradual erosion of protections. Finally, I linked the contour lines to scroll-driven CSS animations, synchronizing the user’s reading with the visual metaphor of fading landscapes.",
+				"images": []
+			},
+			{
+				"title": "Scroll path animation",
+				"href": "Path animation",
+				"content": "The path lines were exported as SVG paths and animated with CSS stroke-dasharray and stroke-dashoffset properties to simulate self-drawing lines. These animations were bound to scroll position, so line progression synced with user movement down the page. In parallel, the Perlin noise–generated contours were grouped by noise values and their opacity decreased in the draw loop, creating a simultaneous fade-out as new paths were revealed.",
+				"images": []
+			},
+			{
+				"title": "Final designs",
+				"href": null,
+				"content": null,
+				"images": [
+					{
+						"type": "image",
+						"src": "hero.gif"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": "us-imports",
+		"title": "Where does the U.S. get its goods?",
+		"tag": "Reuters",
+		"href": "https://www.reuters.com/graphics/USA-TARIFFS/TRADE-QUIZ/myvmxynnrpr/",
+		"position": [12, 6],
+		"supporting": ["waffle-1.gif", "drawing-1.png", "allWaffles.gif"],
+		"paragraphs": [
+			{
+				"title": "Role",
+				"href": null,
+				"content": "Designer, Creative Coder, Data Viz Developer",
+				"images": []
+			},
+			{
+				"title": "Tools & Tech",
+				"href": null,
+				"content": "Three.js, Svelte",
+				"images": []
+			},
+			{
+				"title": "Overview",
+				"href": null,
+				"content": "The Reuters piece Where does the U.S. get its goods? examines U.S. trade dependencies by testing readers’ assumptions about where everyday products come from. It shows how imports like electronics, clothing, and cars are concentrated among a few countries, with China, Mexico, and Canada consistently leading the charts. At a time when tariffs and trade policy were at the center of U.S. politics, the visualization made the scale and distribution of imports clear. By letting readers highlight individual countries and see their share across categories, the project connected abstract trade debates to the goods people use every day.",
+				"images": []
+			},
+			{
+				"title": "Team",
+				"href": null,
+				"content": "<b>Graphics reporters:</b> Clare Farley, Soumya Karwa, Vineet Sachdev, Sumanta Sen.<br><b>Editors:</b> Ella Koeze, Julia Wolfe.",
+				"images": []
+			},
+			{
+				"title": "Initial sketches",
+				"href": null,
+				"content": "The opening quiz mechanic and game-like framing had already been developed when I joined the project. My role was to design and implement the data visualization component. Early prototypes used flat waffle charts to show the share of imports by country for each good. To better align with the isometric aesthetic of the piece, I proposed a 3D-inspired approach. By adapting the waffle chart into an isometric container boxes stacked on top of one another, I was able to maintain the playful visual style of the quiz while building a more dynamic and flexible visualization component system that could handle different product categories and import percentages.",
+				"images": [
+					{
+						"type": "image",
+						"src": "drawing-1.png"
+					},
+					{
+						"type": "image",
+						"src": "drawing-2.png"
+					}
+				]
+			},
+			{
+				"title": "Three.js x Svelte",
+				"href": "Algorithm",
+				"content": "The waffle charts served as an important interactive element of the piece, with each chart showing a single product category broken down by country of import. Each country was assigned a consistent color across all charts, supported by a legend that helped readers quickly connect colors to countries and compare values across categories. Readers could click on a country in the legend to highlight its share in the chosen product, with Svelte managing the interaction state and passing updates into each canvas to adjust block opacity and highlighting in real time.<br><br>Every waffle chart was built as its own Three.js canvas, using an orthographic projection to achieve the isometric style and InstancedMesh to efficiently render hundreds of cubes. Each container represented a unit of imports (depending on the product category’s scale), stacked into columns by country.",
+				"images": [
+					{
+						"type": "image",
+						"src": "waffle-few.gif"
+					}
+				]
+			},
+
+			{
+				"title": "Final designs",
+				"href": null,
+				"content": null,
+				"images": [
+					{
+						"type": "image",
+						"src": "allWaffles.gif"
+					},
+					{
+						"type": "image",
+						"src": "hero.gif"
+					}
+				]
+			}
+		]
+	}
+]

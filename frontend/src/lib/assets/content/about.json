@@ -1,0 +1,57 @@
+[
+	{
+		"title": "Data X Design x Code",
+		"paragraphs": [
+			{
+				"title": "TLDR",
+				"content": "Hey there! Thanks for visiting my website! I'm Soumya, currently a Graphics Reporter (Intern) at <span class='font-bold'>Thomson Reuters</span> in New York City. In today’s attention economy, I believe the strongest way to tell stories and build trust is through direct, transparent communication, showing the data behind the narrative.<br><br>My work explores the intersection of data, design, and code, pushing the boundaries of what these tools can create together. I’m always excited to chat about this space (and more things like the <b>right</b> way to make an iced latte) so please reach out at <a href='mailto:soumyakarwa01@gmail.com'>soumyakarwa01@gmail.com</a>.",
+				"images": []
+			},
+			{
+				"title": "Experience",
+				"content": "<b>Current</b><br>Graphics @ Thomson Reuters<br><br><b>Previous</b><br>Data Visualization (Design & Dev) @ The DataFace<br>Data Visualization TA @ Parsons School of Design<br>Creative Coder @ 2024 Parsons Benefit",
+				"images": []
+			},
+			{
+				"title": "Education",
+				"content": "<b>Parsons School of Design</b><br>MFA Design & Technology (Creative Coding, Data Storytelling)<br><br><b>Brown University</b><br>BS Applied Math-Computer Science",
+				"images": [
+					{
+						"type": "image",
+						"src": "brown.jpeg"
+					}
+				]
+			},
+			{
+				"title": "HOME",
+				"content": "Not a day goes by when I don't miss my home: Mumbai, India.",
+				"images": [
+					{
+						"type": "image",
+						"src": "mumbai.jpeg"
+					}
+				]
+			},
+			{
+				"title": "VOCALS",
+				"content": "I've been singing for as long as I can remember. My last a capella show in college ",
+				"images": [
+					{
+						"type": "image",
+						"src": "singing.jpeg"
+					}
+				]
+			},
+			{
+				"title": "FOODIE",
+				"content": "I absolutely LOVE to try new cuisines. If you're curious or in need of a recommendation, check out my Beli!",
+				"images": [
+					{
+						"type": "image",
+						"src": "food.jpeg"
+					}
+				]
+			}
+		]
+	}
+]

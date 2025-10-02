@@ -41,6 +41,7 @@
 	const name = ['SOUMYA', 'KARWA'];
 
 	let containerWidth: number = $state(0);
+	let containerHeight: number = $state(0);
 	let screenWidth: number = $state(0);
 	let checked: boolean = $state(false);
 	// let isGrid: boolean = $derived(checked && $isDesktop);
@@ -63,8 +64,6 @@
 		isDesktop.set(screenWidth >= 1024);
 		isGridLayout.set(!$isDesktop || checked);
 	});
-
-	$inspect($isGridLayout);
 </script>
 
 <svelte:head>
@@ -108,7 +107,7 @@
 				{/each}
 			</div>
 		{/each}
-		{#if $isDesktop}
+		{#if $isDesktop && page.route.id == '/'}
 			<ToggleSwitch size={'sm'} icon={!checked ? 'web_traffic' : 'tile_small'} bind:checked />
 		{/if}
 	</div>
@@ -130,19 +129,28 @@
 	</div>
 
 	<div
-		class="h-full w-full overflow-y-auto scroll-smooth p-6"
+		class="relative h-full w-full overflow-y-auto scroll-smooth bg-white p-6"
 		style="background-image:var(--dashed-border)"
 		onscroll={onScroll}
+		bind:clientWidth={containerWidth}
+		bind:clientHeight={containerHeight}
 	>
 		{@render children?.()}
 	</div>
 
 	<div
-		class="absolute right-6 bottom-6 mr-[0.5px] mb-[0.75px] ml-[0.5px] h-1/20 bg-gradient-to-t from-white to-transparent"
+		aria-hidden="true"
+		class="pointer-events-none absolute top-6 right-6 z-10"
+		style="background-image: var(--dashed-border);"
+		style:width="{containerWidth}px"
+		style:height="{containerHeight}px"
+	></div>
+	<div
+		class="absolute right-6 bottom-6 z-10 mr-[0.5px] mb-[0.75px] ml-[0.5px] h-1/20 bg-gradient-to-t from-white to-transparent"
 		style:width="{containerWidth - 1}px"
 	></div>
 	<div
-		class="absolute top-6 right-6 mt-[0.5px] mr-[0.5px] ml-[0.5px] h-1/50 bg-gradient-to-b from-white to-transparent"
+		class="absolute top-6 right-6 z-10 mt-[0.5px] mr-[0.5px] ml-[0.5px] h-1/50 bg-gradient-to-b from-white to-transparent"
 		style:width="{containerWidth - 1}px"
 	></div>
 </div>

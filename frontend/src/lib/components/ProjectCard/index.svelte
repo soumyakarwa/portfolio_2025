@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Pill from '$lib/components/Pill/index.svelte';
 	import { fade } from 'svelte/transition';
 	import { goto } from '$app/navigation';
 	import { isGridLayout } from '$lib/components/Util/index';
@@ -6,12 +7,12 @@
 	interface Props {
 		id: string;
 		title: string;
-		overview: string;
+		tag: string;
 		supporting: string[];
 		activeIndex: string;
 	}
 
-	let { id, title, overview, supporting, activeIndex }: Props = $props();
+	let { id, title, tag, supporting, activeIndex }: Props = $props();
 
 	const imgSrc = `/assets/${id}/hero.gif`;
 	const offset = 0;
@@ -24,7 +25,6 @@
 
 	let imageWidth = $state(0);
 	let imageHeight = $state(0);
-	// let imageHeight = $derived((imageWidth * 9) / 16);
 	let containerWidth = $state(0);
 	let containerHeight = $state(0);
 
@@ -61,15 +61,16 @@
 {/if}
 <div
 	id={`project-${id}`}
-	class="z-10 flex h-auto w-full flex-col justify-around gap-1 bg-white p-3 lg:absolute"
+	class={[
+		'z-10 flex h-auto w-full flex-col justify-evenly gap-2 bg-white p-3',
+		!$isGridLayout ? 'lg:absolute' : ''
+	]}
 	style:background-image="var(--dashed-border)"
 	role="link"
 	tabindex="0"
 	onclick={() => open()}
 	onkeydown={(e) => e.key === 'Enter' && open()}
-	bind:clientHeight={containerHeight}
 	bind:clientWidth={containerWidth}
-	style:min-height="{imageHeight}px"
 >
 	<img
 		src={imgSrc}
@@ -78,8 +79,8 @@
 		bind:clientWidth={imageWidth}
 		bind:clientHeight={imageHeight}
 	/>
-	<!-- <div class="flex flex-col"> -->
-	<div class="text-base font-bold uppercase">{title}</div>
-	<!-- <div class="text-xs">{overview}</div> -->
-	<!-- </div> -->
+	<div class="h-max-content flex flex-row items-center justify-between">
+		<div class="w-max-content max-w-3/4 text-left text-base font-bold uppercase">{title}</div>
+		<Pill label={tag} />
+	</div>
 </div>
