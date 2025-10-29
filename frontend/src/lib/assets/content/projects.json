@@ -2,6 +2,7 @@
 	{
 		"id": "iconic-duo",
 		"title": "The Most Iconic Duo In Brooklyn Nine-Nine",
+		"dateCompleted": "October-2024",
 		"tag": "Personal",
 		"href": "https://brooklyn-nine-nine-duos.vercel.app/",
 		"position": [3, 3],
@@ -199,6 +200,7 @@
 	{
 		"id": "echoes-of-conflict",
 		"title": "Echoes of Conflict",
+		"dateCompleted": "May-2024",
 		"tag": "Parsons",
 		"href": "https://soumyakarwa.github.io/echoes-of-conflict/",
 		"position": [10, 6],
@@ -275,6 +277,7 @@
 	{
 		"id": "parsons-benefit",
 		"title": "2024 Parsons Benefit",
+		"dateCompleted": "May-2024",
 		"tag": "Parsons",
 		"href": "https://www.youtube.com/watch?v=B4-ECRn2xAs",
 		"position": [4, 8],
@@ -337,6 +340,7 @@
 	{
 		"id": "eroding-protections",
 		"title": "Eroding protections",
+		"dateCompleted": "July-2024",
 		"tag": "Reuters",
 		"href": "https://www.reuters.com/graphics/USA-TRUMP/PUBLIC-LANDS/zdpxkxdwnvx/",
 		"position": [17, 3],
@@ -400,6 +404,7 @@
 	{
 		"id": "us-imports",
 		"title": "Where does the U.S. get its goods?",
+		"dateCompleted": "September-2024",
 		"tag": "Reuters",
 		"href": "https://www.reuters.com/graphics/USA-TARIFFS/TRADE-QUIZ/myvmxynnrpr/",
 		"position": [12, 6],

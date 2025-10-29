@@ -1,6 +1,6 @@
 <script lang="ts">
 	import ProjectCard from '$lib/components/ProjectCard/index.svelte';
-	import Projects from '$lib/assets/content/content.json';
+	import Projects from '$lib/assets/content/projects.json';
 	import { isDesktop, isGridLayout } from '$lib/components/Util/index';
 	import { fade } from 'svelte/transition';
 

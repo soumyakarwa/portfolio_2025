@@ -3,7 +3,7 @@
 </script>
 
 <div class="relative flex flex-col gap-6">
-	<div class="max-w-content fixed flex flex-col p-1 text-base font-bold uppercase">
+	<div class="max-w-content fixed flex flex-col bg-white p-1 text-base font-bold uppercase">
 		{@html data[0].title}
 	</div>
 	<!-- opacity-0 title for positioning -->

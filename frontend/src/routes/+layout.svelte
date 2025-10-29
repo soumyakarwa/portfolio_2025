@@ -43,7 +43,7 @@
 	let containerWidth: number = $state(0);
 	let containerHeight: number = $state(0);
 	let screenWidth: number = $state(0);
-	let checked: boolean = $state(false);
+	let checked: boolean = $state(true);
 	// let isGrid: boolean = $derived(checked && $isDesktop);
 
 	let projectLinks = $derived(
