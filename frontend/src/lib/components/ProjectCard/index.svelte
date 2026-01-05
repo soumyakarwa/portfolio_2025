@@ -62,7 +62,7 @@
 <div
 	id={`project-${id}`}
 	class={[
-		'z-10 flex h-auto w-full flex-col justify-evenly gap-2 bg-white p-3',
+		'z-10 flex h-auto w-full flex-col justify-evenly gap-2 bg-white p-3 hover:cursor-pointer',
 		!$isGridLayout ? 'lg:absolute' : ''
 	]}
 	style:background-image="var(--dashed-border)"
