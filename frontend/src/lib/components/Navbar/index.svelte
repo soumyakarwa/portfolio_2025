@@ -11,8 +11,6 @@
 	}
 
 	const { links, textClass }: Props = $props();
-
-	//
 </script>
 
 <div class="flex flex-col items-start justify-center lg:items-end">

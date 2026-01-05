@@ -340,7 +340,7 @@
 	{
 		"id": "eroding-protections",
 		"title": "Eroding protections",
-		"dateCompleted": "July-2024",
+		"dateCompleted": "July-2025",
 		"tag": "Reuters",
 		"href": "https://www.reuters.com/graphics/USA-TRUMP/PUBLIC-LANDS/zdpxkxdwnvx/",
 		"position": [17, 3],
@@ -404,7 +404,7 @@
 	{
 		"id": "us-imports",
 		"title": "Where does the U.S. get its goods?",
-		"dateCompleted": "September-2024",
+		"dateCompleted": "September-2025",
 		"tag": "Reuters",
 		"href": "https://www.reuters.com/graphics/USA-TARIFFS/TRADE-QUIZ/myvmxynnrpr/",
 		"position": [12, 6],
@@ -470,6 +470,314 @@
 						"type": "image",
 						"src": "allWaffles.gif"
 					},
+					{
+						"type": "image",
+						"src": "hero.gif"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": "fair-plans",
+		"title": "How a U.S. home insurance fix is becoming a problem",
+		"dateCompleted": "December-2025",
+		"tag": "Reuters",
+		"href": "https://www.reuters.com/graphics/USA-ECONOMY/FAIR-INSURANCE/lgpdqnqamvo/",
+		"position": [13, 7],
+		"supporting": ["waffle-1.gif", "drawing-1.png", "allWaffles.gif"],
+		"paragraphs": [
+			{
+				"title": "Role",
+				"href": null,
+				"content": "Lead Designer, Lead Developer, Supporting Reporter",
+				"images": []
+			},
+			{
+				"title": "Tools & Tech",
+				"href": null,
+				"content": "Rough.js, Svelte",
+				"images": []
+			},
+			{
+				"title": "Overview",
+				"href": null,
+				"content": "The Reuters piece Where does the U.S. get its goods? examines U.S. trade dependencies by testing readers’ assumptions about where everyday products come from. It shows how imports like electronics, clothing, and cars are concentrated among a few countries, with China, Mexico, and Canada consistently leading the charts. At a time when tariffs and trade policy were at the center of U.S. politics, the visualization made the scale and distribution of imports clear. By letting readers highlight individual countries and see their share across categories, the project connected abstract trade debates to the goods people use every day.",
+				"images": []
+			},
+			{
+				"title": "Team",
+				"href": null,
+				"content": "<b>Graphics reporters:</b>Prinz Magtulis, Soumya Karwa.<br><b>Editors:</b> Ella Koeze, Matthew Weber.",
+				"images": []
+			},
+			{
+				"title": "Initial sketches",
+				"href": null,
+				"content": "The opening quiz mechanic and game-like framing had already been developed when I joined the project. My role was to design and implement the data visualization component. Early prototypes used flat waffle charts to show the share of imports by country for each good. To better align with the isometric aesthetic of the piece, I proposed a 3D-inspired approach. By adapting the waffle chart into an isometric container boxes stacked on top of one another, I was able to maintain the playful visual style of the quiz while building a more dynamic and flexible visualization component system that could handle different product categories and import percentages.",
+				"images": [
+					{
+						"type": "image",
+						"src": "drawing-1.png"
+					},
+					{
+						"type": "image",
+						"src": "drawing-2.png"
+					}
+				]
+			},
+			{
+				"title": "Three.js x Svelte",
+				"href": "Algorithm",
+				"content": "The waffle charts served as an important interactive element of the piece, with each chart showing a single product category broken down by country of import. Each country was assigned a consistent color across all charts, supported by a legend that helped readers quickly connect colors to countries and compare values across categories. Readers could click on a country in the legend to highlight its share in the chosen product, with Svelte managing the interaction state and passing updates into each canvas to adjust block opacity and highlighting in real time.<br><br>Every waffle chart was built as its own Three.js canvas, using an orthographic projection to achieve the isometric style and InstancedMesh to efficiently render hundreds of cubes. Each container represented a unit of imports (depending on the product category’s scale), stacked into columns by country.",
+				"images": [
+					{
+						"type": "image",
+						"src": "waffle-few.gif"
+					}
+				]
+			},
+
+			{
+				"title": "Final designs",
+				"href": null,
+				"content": null,
+				"images": [
+					{
+						"type": "image",
+						"src": "allWaffles.gif"
+					},
+					{
+						"type": "image",
+						"src": "hero.gif"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": "staatus-index",
+		"title": "STAATUS Index (The Asian American Foundation)",
+		"dateCompleted": "May-2025",
+		"tag": "Dataface",
+		"href": "https://www.taaf.org/our-work/staatus-index-2025",
+		"position": [10, 6],
+		"supporting": ["radial.gif", "echoesOfConflict-1.jpg", "echoesOfConflict-2.jpg"],
+		"paragraphs": [
+			{
+				"title": "Role",
+				"href": null,
+				"content": "Designer, Developer, Data Analyst",
+				"images": []
+			},
+			{
+				"title": "Tools & Tech",
+				"href": null,
+				"content": "d3.js, HTML/CSS, Javascript",
+				"images": []
+			},
+			{
+				"title": "Overview",
+				"href": null,
+				"content": "Created an interactive radial bar chart to illustrate the prevalence of war rhetoric in the State of the Union Addresses over the last century. This data-driven approach provides a revealing look at how war has ebbed and flowed as a subject in the annual addresses to Congress, reflecting the nation's entanglement with international and domestic conflicts over time.",
+				"images": [
+					{
+						"type": "image",
+						"src": "echoesOfConflict.gif"
+					}
+				]
+			},
+			{
+				"title": "What is the state of the union address?",
+				"href": "Union address",
+				"content": "The State of the Union address is a yearly speech delivered by the President of the United States to Congress. It outlines the nation's condition in the past year and sets forth the legislative agenda for the following year.",
+				"images": []
+			},
+			{
+				"title": "Description",
+				"href": null,
+				"content": "\"Echoes of Conflict,\" uses a radial bar chart to depict each year's address, with the bar lengths showing the percentage of the speech dedicated to discussing war. According to the U.S. Department of Veteran Affairs, the U.S. has been involved in five wars in the 20th century: World War I, World War II, Korean War, Vietnam War and the Global War on Terror. I wanted to depict a comparison between the Addresses in war years and non-war years. It is interesting to note that, despite the U.S.'s long involvement in the Vietnam War, the porportion of Addresses dedicated to talking about it is far lesser compared to years of other wars. Maybe it was because of the number of anti-war protests during that time?",
+				"images": [
+					{
+						"type": "image",
+						"src": "radial.gif"
+					}
+				]
+			},
+			{
+				"title": "Initial sketches",
+				"href": "Sketches",
+				"content": "To effectively display over 100 data points in a way that emphasizes comparison without overwhelming the viewer, I opted for a radial bar chart. This design allows for an intuitive visual comparison of categories, as longer bars stand out prominently against shorter ones, clearly depicting differences without the need for specific numerical values. I thought this would simplify the viewer's experience by focusing on relative magnitudes rather than precise data.",
+				"images": [
+					{
+						"type": "image",
+						"src": "echoesOfConflict-1.jpg"
+					},
+					{
+						"type": "image",
+						"src": "echoesOfConflict-2.jpg"
+					}
+				]
+			},
+			{
+				"title": "Final designs",
+				"href": "Designs",
+				"content": null,
+				"images": [
+					{
+						"type": "image",
+						"src": "hero.gif"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": "electon-safety",
+		"title": "Safety at the Polls (States United Democracy Center)",
+		"dateCompleted": "April-2025",
+		"tag": "Dataface",
+		"href": "https://www.electionsafety.org",
+		"position": [10, 6],
+		"supporting": ["radial.gif", "echoesOfConflict-1.jpg", "echoesOfConflict-2.jpg"],
+		"paragraphs": [
+			{
+				"title": "Role",
+				"href": null,
+				"content": "Designer, Developer, Data Analyst",
+				"images": []
+			},
+			{
+				"title": "Tools & Tech",
+				"href": null,
+				"content": "d3.js, HTML/CSS, Javascript",
+				"images": []
+			},
+			{
+				"title": "Overview",
+				"href": null,
+				"content": "Created an interactive radial bar chart to illustrate the prevalence of war rhetoric in the State of the Union Addresses over the last century. This data-driven approach provides a revealing look at how war has ebbed and flowed as a subject in the annual addresses to Congress, reflecting the nation's entanglement with international and domestic conflicts over time.",
+				"images": [
+					{
+						"type": "image",
+						"src": "echoesOfConflict.gif"
+					}
+				]
+			},
+			{
+				"title": "What is the state of the union address?",
+				"href": "Union address",
+				"content": "The State of the Union address is a yearly speech delivered by the President of the United States to Congress. It outlines the nation's condition in the past year and sets forth the legislative agenda for the following year.",
+				"images": []
+			},
+			{
+				"title": "Description",
+				"href": null,
+				"content": "\"Echoes of Conflict,\" uses a radial bar chart to depict each year's address, with the bar lengths showing the percentage of the speech dedicated to discussing war. According to the U.S. Department of Veteran Affairs, the U.S. has been involved in five wars in the 20th century: World War I, World War II, Korean War, Vietnam War and the Global War on Terror. I wanted to depict a comparison between the Addresses in war years and non-war years. It is interesting to note that, despite the U.S.'s long involvement in the Vietnam War, the porportion of Addresses dedicated to talking about it is far lesser compared to years of other wars. Maybe it was because of the number of anti-war protests during that time?",
+				"images": [
+					{
+						"type": "image",
+						"src": "radial.gif"
+					}
+				]
+			},
+			{
+				"title": "Initial sketches",
+				"href": "Sketches",
+				"content": "To effectively display over 100 data points in a way that emphasizes comparison without overwhelming the viewer, I opted for a radial bar chart. This design allows for an intuitive visual comparison of categories, as longer bars stand out prominently against shorter ones, clearly depicting differences without the need for specific numerical values. I thought this would simplify the viewer's experience by focusing on relative magnitudes rather than precise data.",
+				"images": [
+					{
+						"type": "image",
+						"src": "echoesOfConflict-1.jpg"
+					},
+					{
+						"type": "image",
+						"src": "echoesOfConflict-2.jpg"
+					}
+				]
+			},
+			{
+				"title": "Final designs",
+				"href": "Designs",
+				"content": null,
+				"images": [
+					{
+						"type": "image",
+						"src": "hero.gif"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": "lifeworx",
+		"title": "Lifeworx",
+		"dateCompleted": "April-2025",
+		"tag": "Freelance",
+		"href": "",
+		"position": [10, 6],
+		"supporting": ["radial.gif", "echoesOfConflict-1.jpg", "echoesOfConflict-2.jpg"],
+		"paragraphs": [
+			{
+				"title": "Role",
+				"href": null,
+				"content": "Designer, Developer, Data Analyst",
+				"images": []
+			},
+			{
+				"title": "Tools & Tech",
+				"href": null,
+				"content": "d3.js, HTML/CSS, Javascript",
+				"images": []
+			},
+			{
+				"title": "Overview",
+				"href": null,
+				"content": "Created an interactive radial bar chart to illustrate the prevalence of war rhetoric in the State of the Union Addresses over the last century. This data-driven approach provides a revealing look at how war has ebbed and flowed as a subject in the annual addresses to Congress, reflecting the nation's entanglement with international and domestic conflicts over time.",
+				"images": [
+					{
+						"type": "image",
+						"src": "echoesOfConflict.gif"
+					}
+				]
+			},
+			{
+				"title": "What is the state of the union address?",
+				"href": "Union address",
+				"content": "The State of the Union address is a yearly speech delivered by the President of the United States to Congress. It outlines the nation's condition in the past year and sets forth the legislative agenda for the following year.",
+				"images": []
+			},
+			{
+				"title": "Description",
+				"href": null,
+				"content": "\"Echoes of Conflict,\" uses a radial bar chart to depict each year's address, with the bar lengths showing the percentage of the speech dedicated to discussing war. According to the U.S. Department of Veteran Affairs, the U.S. has been involved in five wars in the 20th century: World War I, World War II, Korean War, Vietnam War and the Global War on Terror. I wanted to depict a comparison between the Addresses in war years and non-war years. It is interesting to note that, despite the U.S.'s long involvement in the Vietnam War, the porportion of Addresses dedicated to talking about it is far lesser compared to years of other wars. Maybe it was because of the number of anti-war protests during that time?",
+				"images": [
+					{
+						"type": "image",
+						"src": "radial.gif"
+					}
+				]
+			},
+			{
+				"title": "Initial sketches",
+				"href": "Sketches",
+				"content": "To effectively display over 100 data points in a way that emphasizes comparison without overwhelming the viewer, I opted for a radial bar chart. This design allows for an intuitive visual comparison of categories, as longer bars stand out prominently against shorter ones, clearly depicting differences without the need for specific numerical values. I thought this would simplify the viewer's experience by focusing on relative magnitudes rather than precise data.",
+				"images": [
+					{
+						"type": "image",
+						"src": "echoesOfConflict-1.jpg"
+					},
+					{
+						"type": "image",
+						"src": "echoesOfConflict-2.jpg"
+					}
+				]
+			},
+			{
+				"title": "Final designs",
+				"href": "Designs",
+				"content": null,
+				"images": [
 					{
 						"type": "image",
 						"src": "hero.gif"

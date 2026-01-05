@@ -7,6 +7,12 @@
 	const COL_SPAN = 8;
 	const ROW_SPAN = 6;
 
+	const sortedProjects = Projects.slice().sort((a, b) => {
+		const dateA = new Date(`${a.dateCompleted}-01`);
+		const dateB = new Date(`${b.dateCompleted}-01`);
+		return dateB.getTime() - dateA.getTime(); // descending (newest first)
+	});
+
 	let active = $state(-1);
 	let activeProject = $state('');
 </script>
@@ -16,7 +22,7 @@
 		class="grid auto-rows-max grid-cols-1 gap-4 hover:cursor-pointer md:grid-cols-2 lg:grid-cols-3"
 		transition:fade
 	>
-		{#each Projects as project, i}
+		{#each sortedProjects as project, i}
 			<ProjectCard
 				id={project.id}
 				title={project.title}
@@ -28,7 +34,7 @@
 	</div>
 {:else}
 	<div class="grid h-full w-full" transition:fade>
-		{#each Projects as project, i}
+		{#each sortedProjects as project, i}
 			<div
 				role="button"
 				tabindex={0}

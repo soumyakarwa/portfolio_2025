@@ -3,7 +3,7 @@
 	import ToggleSwitch from '$lib/components/ToggleSwitch/index.svelte';
 	import { page } from '$app/state';
 	import '../app.css';
-	import favicon from '$lib/assets/favicon.svg';
+	import favicon from '$lib/assets/logo.png';
 	import { scrollY, isMenuOpen, isDesktop, isGridLayout } from '$lib/components/Util/index';
 
 	let { children } = $props();
@@ -63,6 +63,9 @@
 	$effect(() => {
 		isDesktop.set(screenWidth >= 1024);
 		isGridLayout.set(!$isDesktop || checked);
+		if (isDesktop) {
+			isMenuOpen.set(false);
+		}
 	});
 </script>
 
@@ -115,7 +118,7 @@
 	<div
 		id="primary-nav"
 		class={[
-			'items-between absolute top-6 left-6 min-h-1/2 w-1/2 flex-col gap-3 bg-white p-6 transition-all duration-200 ease-linear',
+			'items-between absolute top-6 left-6 min-h-1/3 w-1/3 flex-col gap-3 bg-white p-6 transition-all duration-200 ease-linear',
 			'lg:static lg:flex lg:h-full lg:w-1/12 lg:translate-y-0 lg:justify-between lg:p-0 lg:opacity-100',
 			$isMenuOpen ? 'z-50 flex translate-y-0 opacity-100' : 'z-0 -translate-y-6 opacity-0'
 		]}
