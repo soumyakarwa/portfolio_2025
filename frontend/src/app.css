@@ -18,10 +18,15 @@ body {
 
 @font-face {
 	font-family: 'GeistMono';
-	src: url('./lib/assets/fonts/GeistMono/GeistMonoVariableVF.ttf');
+	src:
+		url('./lib/assets/fonts/GeistMono/GeistMonoVariableVF.woff2') format('woff2'),
+		url('./lib/assets/fonts/GeistMono/GeistMonoVariableVF.ttf') format('truetype');
+	font-weight: 100 900;
+	font-style: normal;
+	font-display: swap;
 }
 
-.material-symbols-outlined {
+*/ .material-symbols-outlined {
 	font-variation-settings:
 		'FILL' 0,
 		'wght' 400,
