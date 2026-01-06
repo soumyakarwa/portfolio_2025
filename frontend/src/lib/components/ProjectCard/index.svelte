@@ -2,17 +2,18 @@
 	import Pill from '$lib/components/Pill/index.svelte';
 	import { fade } from 'svelte/transition';
 	import { goto } from '$app/navigation';
-	import { isGridLayout } from '$lib/components/Util/index';
+	import { isGridLayout, awards } from '$lib/components/Util/index';
 
 	interface Props {
 		id: string;
 		title: string;
 		tag: string;
+		award: string[];
 		supporting: string[];
 		activeIndex: string;
 	}
 
-	let { id, title, tag, supporting, activeIndex }: Props = $props();
+	let { id, title, tag, award, supporting, activeIndex }: Props = $props();
 
 	const imgSrc = `/assets/${id}/hero.gif`;
 	const offset = 0;
@@ -23,10 +24,10 @@
 
 	const step = supporting.length > 0 ? 360 / supporting.length : 1;
 
-	let imageWidth = $state(0);
-	let imageHeight = $state(0);
-	let containerWidth = $state(0);
-	let containerHeight = $state(0);
+	let imageWidth: number = $state(0);
+	let imageHeight: number = $state(0);
+	let containerWidth: number = $state(0);
+	let containerHeight: number = $state(0);
 
 	const R = $derived(Math.max(containerWidth, containerHeight) * 0.5 + offset);
 
@@ -62,7 +63,7 @@
 <div
 	id={`project-${id}`}
 	class={[
-		'z-10 flex h-auto w-full flex-col justify-evenly gap-2 bg-white p-3 hover:cursor-pointer',
+		'relative z-10 flex h-auto w-full flex-col justify-evenly gap-2 bg-white p-3 hover:cursor-pointer',
 		!$isGridLayout ? 'lg:absolute' : ''
 	]}
 	style:background-image="var(--dashed-border)"
@@ -70,6 +71,12 @@
 	tabindex="0"
 	onclick={() => open()}
 	onkeydown={(e) => e.key === 'Enter' && open()}
+	onmouseenter={() => {
+		awards.set(award);
+	}}
+	onmouseleave={() => {
+		awards.set([]);
+	}}
 	bind:clientWidth={containerWidth}
 >
 	<img
@@ -80,7 +87,9 @@
 		bind:clientHeight={imageHeight}
 	/>
 	<div class="h-max-content flex flex-row items-center justify-between">
-		<div class="w-max-content max-w-3/4 text-left text-base font-bold uppercase">{title}</div>
+		<div class="w-max-content max-w-3/4 text-left text-base font-bold uppercase">
+			{title}
+		</div>
 		<Pill label={tag} />
 	</div>
 </div>

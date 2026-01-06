@@ -4,7 +4,7 @@
 	import { page } from '$app/state';
 	import '../app.css';
 	import favicon from '$lib/assets/logo.png';
-	import { scrollY, isMenuOpen, isDesktop, isGridLayout } from '$lib/components/Util/index';
+	import { scrollY, isMenuOpen, isDesktop, isGridLayout, awards } from '$lib/components/Util/index';
 
 	let { children } = $props();
 
@@ -44,6 +44,7 @@
 	let containerHeight: number = $state(0);
 	let screenWidth: number = $state(0);
 	let checked: boolean = $state(true);
+	let m: { x: number; y: number } = $state({ x: 0, y: 0 });
 	// let isGrid: boolean = $derived(checked && $isDesktop);
 
 	let projectLinks = $derived(
@@ -58,6 +59,11 @@
 	const onScroll = (e: Event) => {
 		const el = e.currentTarget as HTMLElement;
 		scrollY.set(el.scrollTop);
+	};
+
+	const handleMousemove = (event: MouseEvent) => {
+		m.x = event.clientX;
+		m.y = event.clientY;
 	};
 
 	$effect(() => {
@@ -75,7 +81,8 @@
 
 <svelte:window bind:innerWidth={screenWidth} />
 
-<div class="relative flex h-screen w-screen flex-row gap-2 p-6">
+<!-- svelte-ignore a11y_no_static_element_interactions -->
+<div class="relative flex h-screen w-screen flex-row gap-2 p-6" onmousemove={handleMousemove}>
 	<button
 		type="button"
 		class="absolute top-6 left-6 z-60 flex translate-x-1/2 -translate-y-1/2 cursor-pointer flex-col gap-[3px] bg-white lg:hidden"
@@ -156,6 +163,23 @@
 		class="absolute top-6 right-6 z-10 mt-[0.5px] mr-[0.5px] ml-[0.5px] h-1/50 bg-gradient-to-b from-white to-transparent"
 		style:width="{containerWidth - 1}px"
 	></div>
+
+	<div
+		class={[
+			'pointer-events-none absolute z-20 flex flex-col rounded-full px-2 py-1',
+			$awards.length !== 0 && page.route.id == '/' && $isGridLayout ? 'opacity-100' : 'opacity-0'
+		]}
+		style:background={'rgba(255, 255, 255, 0.85)'}
+		style:left={`${m.x}px`}
+		style:top={`${m.y}px`}
+		style:transform={`translate(-50%, 50%)`}
+		style:width={'max-content'}
+		style:transition={'opacity 0.3s linear'}
+	>
+		{#each $awards as a}
+			<div class="w-max-content text-center text-xs">{a.split('(')[0].trim()}</div>
+		{/each}
+	</div>
 </div>
 
 <style>

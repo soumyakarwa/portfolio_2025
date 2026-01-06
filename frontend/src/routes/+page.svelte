@@ -18,12 +18,13 @@
 </script>
 
 {#if $isGridLayout}
-	<div class="grid auto-rows-max grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3" transition:fade>
+	<div class="grid auto-rows-max grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3" transition:fade>
 		{#each sortedProjects as project, i}
 			<ProjectCard
 				id={project.id}
 				title={project.title}
 				tag={project.tag}
+				award={project.awards}
 				supporting={project.supporting}
 				activeIndex={activeProject}
 			/>
@@ -57,6 +58,7 @@
 					id={project.id}
 					title={project.title}
 					tag={project.tag}
+					award={project.awards}
 					supporting={project.supporting}
 					activeIndex={activeProject}
 				/>

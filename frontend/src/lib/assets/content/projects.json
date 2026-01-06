@@ -6,6 +6,7 @@
 		"tag": "Personal",
 		"href": "https://brooklyn-nine-nine-duos.vercel.app/",
 		"position": [3, 3],
+		"awards": ["2024 Pudding Cup (Honorable Mention)", "2024 Information is Beautiful (Longlist)"],
 		"supporting": [
 			"characters.gif",
 			"gpt-use.gif",
@@ -25,6 +26,12 @@
 				"title": "Tools & Tech",
 				"href": null,
 				"content": "Photoshop, Figma, Svelte.js, d3.js, NLTK, OpenAI API",
+				"images": []
+			},
+			{
+				"title": "Awards",
+				"href": null,
+				"content": "2024 Pudding Cup (Honorable Mention)<br>2024 Information is Beautiful (Longlist)",
 				"images": []
 			},
 			{
@@ -204,6 +211,7 @@
 		"tag": "Parsons",
 		"href": "https://soumyakarwa.github.io/echoes-of-conflict/",
 		"position": [10, 6],
+		"awards": [],
 		"supporting": ["radial.gif", "echoesOfConflict-1.jpg", "echoesOfConflict-2.jpg"],
 		"paragraphs": [
 			{
@@ -281,6 +289,7 @@
 		"tag": "Parsons",
 		"href": "https://www.youtube.com/watch?v=B4-ECRn2xAs",
 		"position": [4, 8],
+		"awards": [],
 		"supporting": [],
 		"paragraphs": [
 			{
@@ -344,6 +353,7 @@
 		"tag": "Reuters",
 		"href": "https://www.reuters.com/graphics/USA-TRUMP/PUBLIC-LANDS/zdpxkxdwnvx/",
 		"position": [17, 3],
+		"awards": ["2025 Flowing Data"],
 		"supporting": [],
 		"paragraphs": [
 			{
@@ -356,6 +366,12 @@
 				"title": "Tools & Tech",
 				"href": null,
 				"content": "Illustrator, SvelteKit, p5.js, d3.js",
+				"images": []
+			},
+			{
+				"title": "Awards",
+				"href": null,
+				"content": "2025 Flowing Data",
 				"images": []
 			},
 			{
@@ -408,6 +424,7 @@
 		"tag": "Reuters",
 		"href": "https://www.reuters.com/graphics/USA-TARIFFS/TRADE-QUIZ/myvmxynnrpr/",
 		"position": [12, 6],
+		"awards": [],
 		"supporting": ["waffle-1.gif", "drawing-1.png", "allWaffles.gif"],
 		"paragraphs": [
 			{
@@ -485,6 +502,7 @@
 		"tag": "Reuters",
 		"href": "https://www.reuters.com/graphics/USA-ECONOMY/FAIR-INSURANCE/lgpdqnqamvo/",
 		"position": [13, 7],
+		"awards": [],
 		"supporting": ["waffle-1.gif", "drawing-1.png", "allWaffles.gif"],
 		"paragraphs": [
 			{
@@ -562,6 +580,10 @@
 		"tag": "Dataface",
 		"href": "https://www.taaf.org/our-work/staatus-index-2025",
 		"position": [10, 6],
+		"awards": [
+			"2025 Shorty Awards–Research Reports (Winner)",
+			"2025 Anthem Awards–Research Projects (Silver)"
+		],
 		"supporting": ["radial.gif", "echoesOfConflict-1.jpg", "echoesOfConflict-2.jpg"],
 		"paragraphs": [
 			{
@@ -574,6 +596,12 @@
 				"title": "Tools & Tech",
 				"href": null,
 				"content": "d3.js, HTML/CSS, Javascript",
+				"images": []
+			},
+			{
+				"title": "Awards",
+				"href": null,
+				"content": "2025 Shorty Awards–Research Reports (Winner)<br>2025 Anthem Awards–Research Projects (Silver)",
 				"images": []
 			},
 			{
@@ -639,6 +667,7 @@
 		"tag": "Dataface",
 		"href": "https://www.electionsafety.org",
 		"position": [10, 6],
+		"awards": [],
 		"supporting": ["radial.gif", "echoesOfConflict-1.jpg", "echoesOfConflict-2.jpg"],
 		"paragraphs": [
 			{
@@ -716,6 +745,7 @@
 		"tag": "Freelance",
 		"href": "",
 		"position": [10, 6],
+		"awards": [],
 		"supporting": ["radial.gif", "echoesOfConflict-1.jpg", "echoesOfConflict-2.jpg"],
 		"paragraphs": [
 			{

@@ -6,3 +6,4 @@ export const activeId: Writable<string> = writable('');
 export const isMenuOpen: Writable<boolean> = writable(false);
 export const isDesktop: Writable<boolean> = writable(false);
 export const isGridLayout: Writable<boolean> = writable(false);
+export const awards: Writable<string[]> = writable([]);
