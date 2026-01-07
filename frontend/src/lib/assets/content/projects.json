@@ -25,7 +25,7 @@
 			{
 				"title": "Tools & Tech",
 				"href": null,
-				"content": "Photoshop, Figma, Svelte.js, d3.js, NLTK, OpenAI API",
+				"content": "Photoshop, Figma, Svelte, D3.js, NLTK, OpenAI API",
 				"images": []
 			},
 			{
@@ -210,7 +210,7 @@
 		"dateCompleted": "May-2024",
 		"tag": "Parsons",
 		"href": "https://soumyakarwa.github.io/echoes-of-conflict/",
-		"position": [10, 6],
+		"position": [2, 12],
 		"awards": [],
 		"supporting": ["radial.gif", "echoesOfConflict-1.jpg", "echoesOfConflict-2.jpg"],
 		"paragraphs": [
@@ -223,7 +223,7 @@
 			{
 				"title": "Tools & Tech",
 				"href": null,
-				"content": "d3.js, HTML/CSS, Javascript",
+				"content": "D3.js, HTML/CSS, Javascript",
 				"images": []
 			},
 			{
@@ -288,7 +288,7 @@
 		"dateCompleted": "May-2024",
 		"tag": "Parsons",
 		"href": "https://www.youtube.com/watch?v=B4-ECRn2xAs",
-		"position": [4, 8],
+		"position": [7, 1],
 		"awards": [],
 		"supporting": [],
 		"paragraphs": [
@@ -301,13 +301,7 @@
 			{
 				"title": "Tools & Tech",
 				"href": null,
-				"content": "Figma, p5.js",
-				"images": []
-			},
-			{
-				"title": "Overview",
-				"href": null,
-				"content": "Used p5.js to design and code an animation video in line with the visual identity and branding created by students of Professor Lucille Tenazas’ class, University Design Studio for the 75<sup>th</sup> Annual Parsons Benefit.",
+				"content": "Figma, P5.js",
 				"images": []
 			},
 			{
@@ -322,6 +316,12 @@
 				]
 			},
 			{
+				"title": "Overview",
+				"href": null,
+				"content": "Used P5.js to design and code an animation video in line with the visual identity and branding created by students of Professor Lucille Tenazas’ class, University Design Studio for the 75<sup>th</sup> Annual Parsons Benefit.",
+				"images": []
+			},
+			{
 				"title": "What is the Parsons Benefit?",
 				"href": "Parsons benefit",
 				"content": "The Parsons Benefit is an annual celebration of the transformational role fashion, design, and the arts play in today’s world. The evening highlights the work of Parsons Fashion and Textile students. It gathers an esteemed assembly of industry leaders, Parsons alumni, and other luminaries from the Parsons global network to recognize the Parsons Table Award recipients. On the occasion of the 75<sup>th</sup> Annual Parsons Benefit, we designed the branding, graphics, animation, and overall visual identity for the Parsons Benefit.",
@@ -330,7 +330,7 @@
 			{
 				"title": "Animation Video",
 				"href": "Animation",
-				"content": "I created an animation using p5.js to align with the logo designed by Aparna. The animation features curvy lines that move in a fluid, oscillating pattern achieved through sine waves, creating a dynamic and engaging background. I wanted the line effect to be organic and similar to the shadowy lines under “BENEFIT.”<br><br>Additionally, I incorporated increasing stroke widths in each section of the lines, resulting in a gradient effect that enhanced the visual depth and appeal of the animation.",
+				"content": "I created an animation using P5.js to align with the logo designed by Aparna. The animation features curvy lines that move in a fluid, oscillating pattern achieved through sine waves, creating a dynamic and engaging background. I wanted the line effect to be organic and similar to the shadowy lines under “BENEFIT.”<br><br>Additionally, I incorporated increasing stroke widths in each section of the lines, resulting in a gradient effect that enhanced the visual depth and appeal of the animation.",
 				"images": [
 					{
 						"type": "image",
@@ -365,7 +365,7 @@
 			{
 				"title": "Tools & Tech",
 				"href": null,
-				"content": "Illustrator, SvelteKit, p5.js, d3.js",
+				"content": "Illustrator, Svelte, P5.js, D3.js",
 				"images": []
 			},
 			{
@@ -375,17 +375,18 @@
 				"images": []
 			},
 			{
-				"title": "Overview",
-				"href": null,
-				"content": "Contributed to Eroding Protections (Reuters), a multimedia investigation into the rollback of U.S. public lands protections. My main responsibility was designing and developing the opening animation. Using the marching squares algorithm in p5.js, I generated dynamic topographic lines that were animated as SVG paths. These paths were synchronized with scrolling via CSS, so that as readers advanced through the story, the drawn lines gradually faded, visually reinforcing the theme of protections eroding from the land itself.",
-				"images": []
-			},
-			{
 				"title": "Team",
 				"href": null,
 				"content": "<b>Graphics reporters:</b> Ally J. Levine, Soumya Karwa, Travis Hartman.<br><b>Editors:</b> Julia Wolfe, Matthew Weber.",
 				"images": []
 			},
+			{
+				"title": "Overview",
+				"href": null,
+				"content": "Contributed to Eroding Protections (Reuters), a multimedia investigation into the rollback of U.S. public lands protections. My main responsibility was designing and developing the opening animation. Using the marching squares algorithm in P5.js, I generated dynamic topographic lines that were animated as SVG paths. These paths were synchronized with scrolling via CSS, so that as readers advanced through the story, the drawn lines gradually faded, visually reinforcing the theme of protections eroding from the land itself.",
+				"images": []
+			},
+
 			{
 				"title": "Significance",
 				"href": null,
@@ -405,7 +406,7 @@
 				"images": []
 			},
 			{
-				"title": "Final designs",
+				"title": "Graphics",
 				"href": null,
 				"content": null,
 				"images": [
@@ -423,7 +424,7 @@
 		"dateCompleted": "September-2025",
 		"tag": "Reuters",
 		"href": "https://www.reuters.com/graphics/USA-TARIFFS/TRADE-QUIZ/myvmxynnrpr/",
-		"position": [12, 6],
+		"position": [15, 12],
 		"awards": [],
 		"supporting": ["waffle-1.gif", "drawing-1.png", "allWaffles.gif"],
 		"paragraphs": [
@@ -440,95 +441,18 @@
 				"images": []
 			},
 			{
-				"title": "Overview",
-				"href": null,
-				"content": "The Reuters piece Where does the U.S. get its goods? examines U.S. trade dependencies by testing readers’ assumptions about where everyday products come from. It shows how imports like electronics, clothing, and cars are concentrated among a few countries, with China, Mexico, and Canada consistently leading the charts. At a time when tariffs and trade policy were at the center of U.S. politics, the visualization made the scale and distribution of imports clear. By letting readers highlight individual countries and see their share across categories, the project connected abstract trade debates to the goods people use every day.",
-				"images": []
-			},
-			{
 				"title": "Team",
 				"href": null,
 				"content": "<b>Graphics reporters:</b> Clare Farley, Soumya Karwa, Vineet Sachdev, Sumanta Sen.<br><b>Editors:</b> Ella Koeze, Julia Wolfe.",
 				"images": []
 			},
 			{
-				"title": "Initial sketches",
-				"href": null,
-				"content": "The opening quiz mechanic and game-like framing had already been developed when I joined the project. My role was to design and implement the data visualization component. Early prototypes used flat waffle charts to show the share of imports by country for each good. To better align with the isometric aesthetic of the piece, I proposed a 3D-inspired approach. By adapting the waffle chart into an isometric container boxes stacked on top of one another, I was able to maintain the playful visual style of the quiz while building a more dynamic and flexible visualization component system that could handle different product categories and import percentages.",
-				"images": [
-					{
-						"type": "image",
-						"src": "drawing-1.png"
-					},
-					{
-						"type": "image",
-						"src": "drawing-2.png"
-					}
-				]
-			},
-			{
-				"title": "Three.js x Svelte",
-				"href": "Algorithm",
-				"content": "The waffle charts served as an important interactive element of the piece, with each chart showing a single product category broken down by country of import. Each country was assigned a consistent color across all charts, supported by a legend that helped readers quickly connect colors to countries and compare values across categories. Readers could click on a country in the legend to highlight its share in the chosen product, with Svelte managing the interaction state and passing updates into each canvas to adjust block opacity and highlighting in real time.<br><br>Every waffle chart was built as its own Three.js canvas, using an orthographic projection to achieve the isometric style and InstancedMesh to efficiently render hundreds of cubes. Each container represented a unit of imports (depending on the product category’s scale), stacked into columns by country.",
-				"images": [
-					{
-						"type": "image",
-						"src": "waffle-few.gif"
-					}
-				]
-			},
-
-			{
-				"title": "Final designs",
-				"href": null,
-				"content": null,
-				"images": [
-					{
-						"type": "image",
-						"src": "allWaffles.gif"
-					},
-					{
-						"type": "image",
-						"src": "hero.gif"
-					}
-				]
-			}
-		]
-	},
-	{
-		"id": "fair-plans",
-		"title": "How a U.S. home insurance fix is becoming a problem",
-		"dateCompleted": "December-2025",
-		"tag": "Reuters",
-		"href": "https://www.reuters.com/graphics/USA-ECONOMY/FAIR-INSURANCE/lgpdqnqamvo/",
-		"position": [13, 7],
-		"awards": [],
-		"supporting": ["waffle-1.gif", "drawing-1.png", "allWaffles.gif"],
-		"paragraphs": [
-			{
-				"title": "Role",
-				"href": null,
-				"content": "Lead Designer, Lead Developer, Supporting Reporter",
-				"images": []
-			},
-			{
-				"title": "Tools & Tech",
-				"href": null,
-				"content": "Rough.js, Svelte",
-				"images": []
-			},
-			{
 				"title": "Overview",
 				"href": null,
 				"content": "The Reuters piece Where does the U.S. get its goods? examines U.S. trade dependencies by testing readers’ assumptions about where everyday products come from. It shows how imports like electronics, clothing, and cars are concentrated among a few countries, with China, Mexico, and Canada consistently leading the charts. At a time when tariffs and trade policy were at the center of U.S. politics, the visualization made the scale and distribution of imports clear. By letting readers highlight individual countries and see their share across categories, the project connected abstract trade debates to the goods people use every day.",
 				"images": []
 			},
-			{
-				"title": "Team",
-				"href": null,
-				"content": "<b>Graphics reporters:</b>Prinz Magtulis, Soumya Karwa.<br><b>Editors:</b> Ella Koeze, Matthew Weber.",
-				"images": []
-			},
+
 			{
 				"title": "Initial sketches",
 				"href": null,
@@ -584,18 +508,18 @@
 			"2025 Shorty Awards–Research Reports (Winner)",
 			"2025 Anthem Awards–Research Projects (Silver)"
 		],
-		"supporting": ["radial.gif", "echoesOfConflict-1.jpg", "echoesOfConflict-2.jpg"],
+		"supporting": ["small-multiples.png", "double-line.png", "dashboard.gif", "bubble.png"],
 		"paragraphs": [
 			{
 				"title": "Role",
 				"href": null,
-				"content": "Designer, Developer, Data Analyst",
+				"content": "Data Visualization & Frontend Developer",
 				"images": []
 			},
 			{
 				"title": "Tools & Tech",
 				"href": null,
-				"content": "d3.js, HTML/CSS, Javascript",
+				"content": "Svelte, D3, GSAP",
 				"images": []
 			},
 			{
@@ -605,48 +529,23 @@
 				"images": []
 			},
 			{
-				"title": "Overview",
+				"title": "Team",
 				"href": null,
-				"content": "Created an interactive radial bar chart to illustrate the prevalence of war rhetoric in the State of the Union Addresses over the last century. This data-driven approach provides a revealing look at how war has ebbed and flowed as a subject in the annual addresses to Congress, reflecting the nation's entanglement with international and domestic conflicts over time.",
-				"images": [
-					{
-						"type": "image",
-						"src": "echoesOfConflict.gif"
-					}
-				]
-			},
-			{
-				"title": "What is the state of the union address?",
-				"href": "Union address",
-				"content": "The State of the Union address is a yearly speech delivered by the President of the United States to Congress. It outlines the nation's condition in the past year and sets forth the legislative agenda for the following year.",
+				"content": "<b>Project Management</b> Jack Beckwith<br><b>Design</b> Sam Vickars, Aria Todd.<br><b>Development:</b> Lesley Huang, Soumya Karwa.",
 				"images": []
 			},
 			{
-				"title": "Description",
+				"title": "Overview",
 				"href": null,
-				"content": "\"Echoes of Conflict,\" uses a radial bar chart to depict each year's address, with the bar lengths showing the percentage of the speech dedicated to discussing war. According to the U.S. Department of Veteran Affairs, the U.S. has been involved in five wars in the 20th century: World War I, World War II, Korean War, Vietnam War and the Global War on Terror. I wanted to depict a comparison between the Addresses in war years and non-war years. It is interesting to note that, despite the U.S.'s long involvement in the Vietnam War, the porportion of Addresses dedicated to talking about it is far lesser compared to years of other wars. Maybe it was because of the number of anti-war protests during that time?",
+				"content": "The STAATUS Index 2025 is the fifth annual Social Tracking of Asian Americans in the U.S. report, translating a nationally representative survey of nearly 5,000 respondents into an interactive portrait of how Asian Americans, Native Hawaiians, and Pacific Islanders are perceived, and misperceived, across the country. The story surfaces a persistent gap between perception and reality: while many Americans believe Asian Americans are treated fairly, the data reveals enduring stereotypes around loyalty, foreignness, and threat, shaped by media, geopolitics, and cultural narratives.<br><br>I helped bring these findings to life through data visualization and frontend development, transforming static report graphics into interactive, scroll-driven experiences. The microsite uses a pixelated, blobby visual language paired with gothic sans serif typography, keeping the presentation minimal but expressive. GSAP-powered animations guide readers through the data, adding motion and responsiveness that make complex survey results feel accessible and emotionally grounded as users move through the story.",
 				"images": [
 					{
 						"type": "image",
-						"src": "radial.gif"
+						"src": "small-multiples.gif"
 					}
 				]
 			},
-			{
-				"title": "Initial sketches",
-				"href": "Sketches",
-				"content": "To effectively display over 100 data points in a way that emphasizes comparison without overwhelming the viewer, I opted for a radial bar chart. This design allows for an intuitive visual comparison of categories, as longer bars stand out prominently against shorter ones, clearly depicting differences without the need for specific numerical values. I thought this would simplify the viewer's experience by focusing on relative magnitudes rather than precise data.",
-				"images": [
-					{
-						"type": "image",
-						"src": "echoesOfConflict-1.jpg"
-					},
-					{
-						"type": "image",
-						"src": "echoesOfConflict-2.jpg"
-					}
-				]
-			},
+
 			{
 				"title": "Final designs",
 				"href": "Designs",
@@ -655,162 +554,186 @@
 					{
 						"type": "image",
 						"src": "hero.gif"
+					},
+					{
+						"type": "image",
+						"src": "dashboard.gif"
+					},
+					{
+						"type": "image",
+						"src": "line-chart.png"
+					},
+					{
+						"type": "image",
+						"src": "bubble.png"
+					},
+					{
+						"type": "image",
+						"src": "small-multiples.png"
 					}
 				]
 			}
 		]
 	},
 	{
-		"id": "electon-safety",
+		"id": "election-safety",
 		"title": "Safety at the Polls (States United Democracy Center)",
 		"dateCompleted": "April-2025",
 		"tag": "Dataface",
 		"href": "https://www.electionsafety.org",
-		"position": [10, 6],
+		"position": [6, 15],
 		"awards": [],
-		"supporting": ["radial.gif", "echoesOfConflict-1.jpg", "echoesOfConflict-2.jpg"],
+		"supporting": ["carousel.gif", "dot-plot.png", "bar-chart.gif", "comparison.png"],
 		"paragraphs": [
 			{
 				"title": "Role",
 				"href": null,
-				"content": "Designer, Developer, Data Analyst",
+				"content": "Data Visualization & Frontend Developer",
 				"images": []
 			},
 			{
 				"title": "Tools & Tech",
 				"href": null,
-				"content": "d3.js, HTML/CSS, Javascript",
+				"content": "D3.js, HTML/CSS, Typescript, GSAP",
+				"images": []
+			},
+			{
+				"title": "Team",
+				"href": null,
+				"content": "<b>Design:</b> Sam Vickars.<br><b>Development:</b> Michael Hester, Soumya Karwa.",
 				"images": []
 			},
 			{
 				"title": "Overview",
 				"href": null,
-				"content": "Created an interactive radial bar chart to illustrate the prevalence of war rhetoric in the State of the Union Addresses over the last century. This data-driven approach provides a revealing look at how war has ebbed and flowed as a subject in the annual addresses to Congress, reflecting the nation's entanglement with international and domestic conflicts over time.",
+				"content": "Contributed to Election Safety, an interactive microsite exploring how fears of intimidation and violence at the polls shape voter confidence and turnout in the U.S. The project translates dense survey research into a clear, visual narrative around voter safety, perception, and participation.<br><br>My role focused on data visualization and frontend development, adapting static research graphics into interactive components. We designed and built reusable chart systems, including bar, column and dot charts with tooltip hovers, alongside large quotation carousels, expandable “nice-to-know” modules, and an exploratory data playground at the end of each “snapshot.” Using a clean, parametrized aesthetic and GSAP-driven animations, I led the application of motion throughout the microsite, ensuring consistency across varying data structures while keeping the visuals simple, engaging, and legible.",
 				"images": [
 					{
 						"type": "image",
-						"src": "echoesOfConflict.gif"
+						"src": "bar-chart.gif"
 					}
 				]
 			},
 			{
-				"title": "What is the state of the union address?",
-				"href": "Union address",
-				"content": "The State of the Union address is a yearly speech delivered by the President of the United States to Congress. It outlines the nation's condition in the past year and sets forth the legislative agenda for the following year.",
-				"images": []
-			},
-			{
-				"title": "Description",
-				"href": null,
-				"content": "\"Echoes of Conflict,\" uses a radial bar chart to depict each year's address, with the bar lengths showing the percentage of the speech dedicated to discussing war. According to the U.S. Department of Veteran Affairs, the U.S. has been involved in five wars in the 20th century: World War I, World War II, Korean War, Vietnam War and the Global War on Terror. I wanted to depict a comparison between the Addresses in war years and non-war years. It is interesting to note that, despite the U.S.'s long involvement in the Vietnam War, the porportion of Addresses dedicated to talking about it is far lesser compared to years of other wars. Maybe it was because of the number of anti-war protests during that time?",
-				"images": [
-					{
-						"type": "image",
-						"src": "radial.gif"
-					}
-				]
-			},
-			{
-				"title": "Initial sketches",
-				"href": "Sketches",
-				"content": "To effectively display over 100 data points in a way that emphasizes comparison without overwhelming the viewer, I opted for a radial bar chart. This design allows for an intuitive visual comparison of categories, as longer bars stand out prominently against shorter ones, clearly depicting differences without the need for specific numerical values. I thought this would simplify the viewer's experience by focusing on relative magnitudes rather than precise data.",
-				"images": [
-					{
-						"type": "image",
-						"src": "echoesOfConflict-1.jpg"
-					},
-					{
-						"type": "image",
-						"src": "echoesOfConflict-2.jpg"
-					}
-				]
-			},
-			{
-				"title": "Final designs",
+				"title": "Graphics",
 				"href": "Designs",
 				"content": null,
 				"images": [
 					{
 						"type": "image",
 						"src": "hero.gif"
+					},
+					{
+						"type": "image",
+						"src": "bar-chart.gif"
+					},
+					{
+						"type": "image",
+						"src": "dashboard.gif"
+					},
+					{
+						"type": "image",
+						"src": "highlight.gif"
+					},
+					{
+						"type": "image",
+						"src": "dot-plot.png"
 					}
 				]
 			}
 		]
 	},
 	{
-		"id": "lifeworx",
-		"title": "Lifeworx",
-		"dateCompleted": "April-2025",
-		"tag": "Freelance",
-		"href": "",
+		"id": "fair-plans",
+		"title": "How a U.S. home insurance fix is becoming a problem",
+		"dateCompleted": "December-2025",
+		"tag": "Reuters",
+		"href": "https://www.reuters.com/graphics/USA-ECONOMY/FAIR-INSURANCE/lgpdqnqamvo/",
 		"position": [10, 6],
 		"awards": [],
-		"supporting": ["radial.gif", "echoesOfConflict-1.jpg", "echoesOfConflict-2.jpg"],
+		"supporting": ["bar-chart.png", "houses.png", "lollipop.png", "disasters.gif", "math-1.png"],
 		"paragraphs": [
 			{
 				"title": "Role",
 				"href": null,
-				"content": "Designer, Developer, Data Analyst",
+				"content": "Lead Designer, Lead Developer, Supporting Reporter",
 				"images": []
 			},
 			{
 				"title": "Tools & Tech",
 				"href": null,
-				"content": "d3.js, HTML/CSS, Javascript",
+				"content": "Rough.js, Svelte",
+				"images": []
+			},
+			{
+				"title": "Team",
+				"href": null,
+				"content": "<b>Graphics reporters:</b> Prinz Magtulis, Soumya Karwa.<br><b>Editors:</b> Ella Koeze, Matthew Weber.",
 				"images": []
 			},
 			{
 				"title": "Overview",
 				"href": null,
-				"content": "Created an interactive radial bar chart to illustrate the prevalence of war rhetoric in the State of the Union Addresses over the last century. This data-driven approach provides a revealing look at how war has ebbed and flowed as a subject in the annual addresses to Congress, reflecting the nation's entanglement with international and domestic conflicts over time.",
+				"content": "Contributed to How a U.S. home insurance fix is becoming a problem (Reuters), a visual investigation into how FAIR plans, originally designed as insurers of last resort, are quietly becoming a central pillar of the U.S. home insurance system as climate risk pushes private insurers out of high-risk areas. I led the design, data visualization, data analysis, and development of the piece, shaping a sketchy, hand-drawn visual language to mirror the deeply personal nature of homes and the uneven, fragile safety net meant to protect them. Applying simple mathematical principles, I coded a house generator that programmatically produces more than 500 unique house illustrations, forming a creative data visualization that conveys the true scale of the FAIR plans issue. Together, the visuals translate abstract insurance data into an emotional, human-centered experience.",
 				"images": [
 					{
 						"type": "image",
-						"src": "echoesOfConflict.gif"
+						"src": "houses.png"
 					}
 				]
 			},
+
 			{
-				"title": "What is the state of the union address?",
-				"href": "Union address",
-				"content": "The State of the Union address is a yearly speech delivered by the President of the United States to Congress. It outlines the nation's condition in the past year and sets forth the legislative agenda for the following year.",
-				"images": []
-			},
-			{
-				"title": "Description",
-				"href": null,
-				"content": "\"Echoes of Conflict,\" uses a radial bar chart to depict each year's address, with the bar lengths showing the percentage of the speech dedicated to discussing war. According to the U.S. Department of Veteran Affairs, the U.S. has been involved in five wars in the 20th century: World War I, World War II, Korean War, Vietnam War and the Global War on Terror. I wanted to depict a comparison between the Addresses in war years and non-war years. It is interesting to note that, despite the U.S.'s long involvement in the Vietnam War, the porportion of Addresses dedicated to talking about it is far lesser compared to years of other wars. Maybe it was because of the number of anti-war protests during that time?",
+				"title": "House generator",
+				"href": "Generator",
+				"content": "I created a house generator using my illustration sketches. With home insurance, the metaphor of “home” stayed with me, so with some Pinterest references, I sketched these houses in color pencils.<br>As the we worked through the data, I realized we probably needed to display at least 300+ houses. I coded a house generator to create different houses instead of sketching and reusing because in real life all homes are different, and I wanted to preserve that metaphor.<br><br><b>Math</b><br>Let’s say we have an SVG of width, <b>w</b> and height, <b>h</b>. I took a sample house and drew bounding points width <b>x3, y3</b> as an anchor point that is always at <b>w/2, h/2</b>. First step was to identify breakpoints along <b>w, h</b>. I chose to have 5 breakpoints at 25% intervals.<br><br>Once I had the breakpoints, I derived the logic to calculate a random value between the upper bound and lower bound for each <b>x, y</b> point. For instance, <b>x2*</b> has to be in between <b>x1</b> and <b>x3</b> while having enough of a gap between both points so the <b>x1-x2, x2-x3</b> lines stay diagonal (not with slope infinity). In this case, <b>x2</b> had to be at 30-70% between <b>x3</b> and <b>x1</b> (as you can see in the calculation below). I carried out a similar calculation for all the house points.<br><br>The house (as in the image) can be broken down into three “faces.” The base rectangle, the roof (parallelogram) and the left “front” face. Once I had all the points, I drew each face as it’s own polygon in Roughjs which preserved the hand drawn sketchy aesthetic. Roughjs has different fill styles which helped me create the sketchy lines and hatched fills. I shuffled the fills for each polygon in each house which added to the “randomness.” There is some more customization like mirroring the house (can face both left and right), and fill style line angles (45, -45, 0, inf).",
 				"images": [
 					{
 						"type": "image",
-						"src": "radial.gif"
-					}
-				]
-			},
-			{
-				"title": "Initial sketches",
-				"href": "Sketches",
-				"content": "To effectively display over 100 data points in a way that emphasizes comparison without overwhelming the viewer, I opted for a radial bar chart. This design allows for an intuitive visual comparison of categories, as longer bars stand out prominently against shorter ones, clearly depicting differences without the need for specific numerical values. I thought this would simplify the viewer's experience by focusing on relative magnitudes rather than precise data.",
-				"images": [
-					{
-						"type": "image",
-						"src": "echoesOfConflict-1.jpg"
+						"src": "math-1.png"
 					},
 					{
 						"type": "image",
-						"src": "echoesOfConflict-2.jpg"
+						"src": "math-2.png"
+					},
+					{
+						"type": "image",
+						"src": "math-3.png"
+					},
+					{
+						"type": "image",
+						"src": "math-4.png"
 					}
 				]
 			},
 			{
-				"title": "Final designs",
-				"href": "Designs",
-				"content": null,
+				"title": "Creative data visualization",
+				"href": "Data viz",
+				"content": "The opening data visualization of How a U.S. home insurance fix is becoming a problem uses a field of hand-drawn house icons to convey the content and scale of the FAIR plan issue. Each house represents a set number of FAIR plan policies and they are plotted over time and across high-risk counties to show how sharply the number of homes covered by FAIR plans has risen from about 222,000 in 2020 to more than 300,000 by 2023 in California alone.<br><br>Instead of presenting abstract lines or bars, this visual metaphor turns raw policy counts into a crowd of homes, making it clear that what once was a temporary safety net for a few has grown into a significant portion of the market as private insurers retreat from wildfire-prone areas. The graphic also isolates Los Angeles County at the end (2025 Palisades fire) to underscore how disaster losses have accelerated take-up and stretched the FAIR system’s capacity.",
 				"images": [
 					{
 						"type": "image",
 						"src": "hero.gif"
+					}
+				]
+			},
+
+			{
+				"title": "Other graphics",
+				"href": "Graphics",
+				"content": null,
+				"images": [
+					{
+						"type": "image",
+						"src": "disasters.gif"
+					},
+					{
+						"type": "image",
+						"src": "bar-chart.png"
+					},
+					{
+						"type": "image",
+						"src": "lollipop.png"
 					}
 				]
 			}

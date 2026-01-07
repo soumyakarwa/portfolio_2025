@@ -53,7 +53,7 @@
 
 {#snippet title()}
 	<div
-		class=" bg-white text-base font-extrabold text-black uppercase opacity-100 mix-blend-difference"
+		class="bg-white text-base font-extrabold text-black uppercase opacity-100 mix-blend-difference"
 	>
 		{data.title}
 	</div>
@@ -68,11 +68,11 @@
 {/snippet}
 
 <div class="relative flex flex-col gap-6" transition:fade bind:this={container}>
-	<div class="max-w-content fixed flex flex-col gap-1 p-1">
+	<div class="max-w-content fixed flex flex-col gap-1">
 		{@render title()}
 	</div>
 	<!-- opacity-0 title for positioning -->
-	<div class="flex flex-col gap-1 p-1 opacity-0">
+	<div class="p flex flex-col gap-1 opacity-0">
 		{@render title()}
 	</div>
 

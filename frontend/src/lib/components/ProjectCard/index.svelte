@@ -15,7 +15,9 @@
 
 	let { id, title, tag, award, supporting, activeIndex }: Props = $props();
 
+	// const staticImgSrc = `/assets/${id}/hero.png`;
 	const imgSrc = `/assets/${id}/hero.gif`;
+
 	const offset = 0;
 	const jitter = 100;
 
@@ -28,6 +30,7 @@
 	let imageHeight: number = $state(0);
 	let containerWidth: number = $state(0);
 	let containerHeight: number = $state(0);
+	let hover: boolean = $state(false);
 
 	const R = $derived(Math.max(containerWidth, containerHeight) * 0.5 + offset);
 
@@ -72,9 +75,11 @@
 	onclick={() => open()}
 	onkeydown={(e) => e.key === 'Enter' && open()}
 	onmouseenter={() => {
+		hover = true;
 		awards.set(award);
 	}}
 	onmouseleave={() => {
+		hover = false;
 		awards.set([]);
 	}}
 	bind:clientWidth={containerWidth}

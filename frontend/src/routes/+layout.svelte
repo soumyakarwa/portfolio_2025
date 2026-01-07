@@ -168,8 +168,8 @@
 
 	<div
 		class={[
-			'pointer-events-none absolute z-20 flex flex-col rounded-full px-2 py-1',
-			$awards.length !== 0 && page.route.id == '/' && $isGridLayout ? 'opacity-100' : 'opacity-0'
+			'pointer-events-none absolute z-100 flex flex-col rounded-full px-2 py-1',
+			$awards.length !== 0 && page.route.id == '/' ? 'opacity-100' : 'opacity-0'
 		]}
 		style:background={'rgba(255, 255, 255, 0.85)'}
 		style:left={`${m.x}px`}
