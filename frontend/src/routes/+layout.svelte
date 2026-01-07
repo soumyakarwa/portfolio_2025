@@ -152,6 +152,8 @@
 		aria-hidden="true"
 		class="pointer-events-none absolute top-6 right-6 z-10"
 		style="background-image: var(--dashed-border);"
+		style:border-left={'1px solid white'}
+		style:border-right={'1px solid white'}
 		style:width="{containerWidth}px"
 		style:height="{containerHeight}px"
 	></div>
@@ -177,7 +179,7 @@
 		style:transition={'opacity 0.3s linear'}
 	>
 		{#each $awards as a}
-			<div class="w-max-content text-center text-xs">{a.split('(')[0].trim()}</div>
+			<div class="w-max-content text-center text-xs">🏆 {a.split('(')[0].trim()}</div>
 		{/each}
 	</div>
 </div>

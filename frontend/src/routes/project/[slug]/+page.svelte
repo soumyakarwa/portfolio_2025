@@ -61,7 +61,9 @@
 		{#if data.href}
 			<Button label={'Demo'} href={data.href}></Button>
 		{/if}
-		<Pill label={data.tag} />
+		{#if data.tag}
+			<Pill label={data.tag} />
+		{/if}
 	</div>
 {/snippet}
 
