@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Navbar from '$lib/components/Navbar/index.svelte';
 	import ToggleSwitch from '$lib/components/ToggleSwitch/index.svelte';
+	import Sketch from '$lib/components/Sketch/index.svelte';
 	import { page } from '$app/state';
 	import '../app.css';
 	import favicon from '$lib/assets/logo.png';
@@ -43,9 +44,9 @@
 	let containerWidth: number = $state(0);
 	let containerHeight: number = $state(0);
 	let screenWidth: number = $state(0);
-	let checked: boolean = $state(true);
+	let checked: boolean = $state(false);
 	let m: { x: number; y: number } = $state({ x: 0, y: 0 });
-	// let isGrid: boolean = $derived(checked && $isDesktop);
+	let isHomePage: boolean = $derived(page.route.id == '/');
 
 	let projectLinks = $derived(
 		page.data?.paragraphs?.map((p: { title: string; href: string }) => ({
@@ -109,6 +110,7 @@
 		>
 	</button>
 
+	<!-- name and grid toggle switch -->
 	<div class="absolute top-[0.75rem] right-[2.3rem] z-50 flex flex-row gap-[8px]">
 		{#each name as word}
 			<div class="flex flex-row">
@@ -117,11 +119,12 @@
 				{/each}
 			</div>
 		{/each}
-		{#if $isDesktop && page.route.id == '/'}
+		{#if $isDesktop && isHomePage}
 			<ToggleSwitch size={'sm'} icon={!checked ? 'web_traffic' : 'tile_small'} bind:checked />
 		{/if}
 	</div>
 
+	<!-- nav bar -->
 	<div
 		id="primary-nav"
 		class={[
@@ -138,6 +141,7 @@
 		<Navbar links={socialLinks} textClass={'text-xs'} newTab={true} />
 	</div>
 
+	<!-- content (case study, project grid, about)-->
 	<div
 		class="relative h-full w-full overflow-y-auto scroll-smooth bg-white p-6"
 		style="background-image:var(--dashed-border)"
@@ -148,6 +152,7 @@
 		{@render children?.()}
 	</div>
 
+	<!-- dashed border -->
 	<div
 		aria-hidden="true"
 		class="pointer-events-none absolute top-6 right-6 z-10"
@@ -157,6 +162,8 @@
 		style:width="{containerWidth}px"
 		style:height="{containerHeight}px"
 	></div>
+
+	<!-- faded out border to show continuation -->
 	<div
 		class="absolute right-6 bottom-6 z-10 mr-[0.5px] mb-[0.75px] ml-[0.5px] h-1/20 bg-gradient-to-t from-white to-transparent"
 		style:width="{containerWidth - 1}px"
@@ -166,10 +173,11 @@
 		style:width="{containerWidth - 1}px"
 	></div>
 
+	<!-- awards tooltip -->
 	<div
 		class={[
 			'pointer-events-none absolute z-100 flex flex-col rounded-full px-2 py-1',
-			$awards.length !== 0 && page.route.id == '/' ? 'opacity-100' : 'opacity-0'
+			$awards.length !== 0 && isHomePage ? 'opacity-100' : 'opacity-0'
 		]}
 		style:background={'rgba(255, 255, 255, 0.85)'}
 		style:left={`${m.x}px`}
@@ -182,6 +190,13 @@
 			<div class="w-max-content text-center text-xs">🏆 {a.split('(')[0].trim()}</div>
 		{/each}
 	</div>
+
+	<!-- sketch prompting user to move the mouse around -->
+	{#if !$isGridLayout && isHomePage}
+		<div class="pointer-events-none absolute right-6 z-50">
+			<Sketch width={containerWidth} height={containerHeight} />
+		</div>
+	{/if}
 </div>
 
 <style>
