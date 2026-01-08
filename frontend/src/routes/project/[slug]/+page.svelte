@@ -83,7 +83,7 @@
 					id={para.href
 						? para.href.toLowerCase().replace(/\s+/g, '-')
 						: para.title.toLowerCase().replace(/\s+/g, '-')}
-					class="flex scroll-mt-24 flex-col gap-3 lg:flex-row lg:gap-9"
+					class="flex flex-col gap-3 lg:flex-row lg:gap-9"
 					bind:this={paras[i].node}
 				>
 					<div class="flex w-full flex-col gap-[2px] lg:w-1/3">
