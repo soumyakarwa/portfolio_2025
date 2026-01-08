@@ -78,6 +78,22 @@
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
+	<title>Soumya Karwa–Data Storytelling & Creative Coding</title>
+	<meta
+		name="description"
+		content="Soumya Karwa is a creative developer working creating scalable and beautiful projects at the intersection of design, data and code."
+	/>
+	<!-- Open Graph -->
+	<meta property="og:title" content="Soumya Karwa-Data Storytelling & Creative Coding" />
+	<meta
+		property="og:description"
+		content="Soumya Karwa is a creative developer working creating scalable and beautiful projects at the intersection of design, data and code."
+	/>
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://soumyakarwa.xyz" />
+
+	<!-- Optional but good -->
+	<meta name="robots" content="index, follow" />
 </svelte:head>
 
 <svelte:window bind:innerWidth={screenWidth} />
