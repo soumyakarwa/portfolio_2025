@@ -37,7 +37,7 @@
 				role="button"
 				tabindex={0}
 				class={[
-					'h-auto w-full opacity-100 transition-opacity duration-200 ease-linear hover:cursor-pointer hover:opacity-100 lg:relative',
+					'h-auto w-full opacity-0 transition-opacity duration-200 ease-linear hover:cursor-pointer hover:opacity-100 lg:relative',
 					$isDesktop && active === i ? 'z-50' : 'z-10',
 					$isDesktop && active !== -1 && active !== i ? 'pointer-events-none' : ''
 				]}
