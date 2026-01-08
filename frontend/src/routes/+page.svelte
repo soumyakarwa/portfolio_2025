@@ -4,8 +4,8 @@
 	import { isDesktop, isGridLayout } from '$lib/components/Util/index';
 	import { fade } from 'svelte/transition';
 
-	const COL_SPAN = 8;
-	const ROW_SPAN = 6;
+	const COL_SPAN = 7;
+	const ROW_SPAN = 5;
 
 	const sortedProjects = Projects.slice().sort((a, b) => {
 		const dateA = new Date(`${a.dateCompleted}-01`);
@@ -37,7 +37,7 @@
 				role="button"
 				tabindex={0}
 				class={[
-					'h-auto w-full opacity-0 transition-opacity duration-200 ease-linear hover:cursor-pointer hover:opacity-100 lg:relative',
+					'h-auto w-full opacity-100 transition-opacity duration-200 ease-linear hover:cursor-pointer hover:opacity-100 lg:relative',
 					$isDesktop && active === i ? 'z-50' : 'z-10',
 					$isDesktop && active !== -1 && active !== i ? 'pointer-events-none' : ''
 				]}

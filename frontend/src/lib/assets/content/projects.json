@@ -5,7 +5,7 @@
 		"dateCompleted": "October-2024",
 		"tag": "Personal",
 		"href": "https://brooklyn-nine-nine-duos.vercel.app/",
-		"position": [3, 3],
+		"position": [3, 2],
 		"awards": ["2024 Pudding Cup (Honorable Mention)", "2024 Information is Beautiful (Longlist)"],
 		"supporting": [
 			"characters.gif",
@@ -210,7 +210,7 @@
 		"dateCompleted": "May-2024",
 		"tag": "Parsons",
 		"href": "https://soumyakarwa.github.io/echoes-of-conflict/",
-		"position": [2, 12],
+		"position": [2, 10],
 		"awards": [],
 		"supporting": ["radial.gif", "echoesOfConflict-1.jpg", "echoesOfConflict-2.jpg"],
 		"paragraphs": [
@@ -424,7 +424,7 @@
 		"dateCompleted": "September-2025",
 		"tag": "Reuters",
 		"href": "https://www.reuters.com/graphics/USA-TARIFFS/TRADE-QUIZ/myvmxynnrpr/",
-		"position": [15, 12],
+		"position": [15, 9],
 		"awards": [],
 		"supporting": ["waffle-1.gif", "drawing-1.png", "allWaffles.gif"],
 		"paragraphs": [
@@ -499,11 +499,11 @@
 	},
 	{
 		"id": "staatus-index",
-		"title": "STAATUS Index (The Asian American Foundation)",
+		"title": "STAATUS Index",
 		"dateCompleted": "May-2025",
 		"tag": "Dataface",
 		"href": "https://www.taaf.org/our-work/staatus-index-2025",
-		"position": [10, 6],
+		"position": [12, 2],
 		"awards": [
 			"2025 Shorty Awards–Research Reports (Winner)",
 			"2025 Anthem Awards–Research Projects (Silver)"
@@ -537,7 +537,7 @@
 			{
 				"title": "Overview",
 				"href": null,
-				"content": "The STAATUS Index 2025 is the fifth annual Social Tracking of Asian Americans in the U.S. report, translating a nationally representative survey of nearly 5,000 respondents into an interactive portrait of how Asian Americans, Native Hawaiians, and Pacific Islanders are perceived, and misperceived, across the country. The story surfaces a persistent gap between perception and reality: while many Americans believe Asian Americans are treated fairly, the data reveals enduring stereotypes around loyalty, foreignness, and threat, shaped by media, geopolitics, and cultural narratives.<br><br>I helped bring these findings to life through data visualization and frontend development, transforming static report graphics into interactive, scroll-driven experiences. The microsite uses a pixelated, blobby visual language paired with gothic sans serif typography, keeping the presentation minimal but expressive. GSAP-powered animations guide readers through the data, adding motion and responsiveness that make complex survey results feel accessible and emotionally grounded as users move through the story.",
+				"content": "The STAATUS Index 2025 is The Asian American Foundation's fifth annual Social Tracking of Asian Americans in the U.S. report, translating a nationally representative survey of nearly 5,000 respondents into an interactive portrait of how Asian Americans, Native Hawaiians, and Pacific Islanders are perceived, and misperceived, across the country. The story surfaces a persistent gap between perception and reality: while many Americans believe Asian Americans are treated fairly, the data reveals enduring stereotypes around loyalty, foreignness, and threat, shaped by media, geopolitics, and cultural narratives.<br><br>I helped bring these findings to life through data visualization and frontend development, transforming static report graphics into interactive, scroll-driven experiences. The microsite uses a pixelated, blobby visual language paired with gothic sans serif typography, keeping the presentation minimal but expressive. GSAP-powered animations guide readers through the data, adding motion and responsiveness that make complex survey results feel accessible and emotionally grounded as users move through the story.",
 				"images": [
 					{
 						"type": "image",
@@ -577,11 +577,11 @@
 	},
 	{
 		"id": "election-safety",
-		"title": "Safety at the Polls (States United Democracy Center)",
+		"title": "Safety at the Polls",
 		"dateCompleted": "April-2025",
 		"tag": "Dataface",
 		"href": "https://www.electionsafety.org",
-		"position": [6, 15],
+		"position": [5, 7],
 		"awards": [],
 		"supporting": ["carousel.gif", "dot-plot.png", "bar-chart.gif", "comparison.png"],
 		"paragraphs": [
@@ -606,7 +606,7 @@
 			{
 				"title": "Overview",
 				"href": null,
-				"content": "Contributed to Election Safety, an interactive microsite exploring how fears of intimidation and violence at the polls shape voter confidence and turnout in the U.S. The project translates dense survey research into a clear, visual narrative around voter safety, perception, and participation.<br><br>My role focused on data visualization and frontend development, adapting static research graphics into interactive components. We designed and built reusable chart systems, including bar, column and dot charts with tooltip hovers, alongside large quotation carousels, expandable “nice-to-know” modules, and an exploratory data playground at the end of each “snapshot.” Using a clean, parametrized aesthetic and GSAP-driven animations, I led the application of motion throughout the microsite, ensuring consistency across varying data structures while keeping the visuals simple, engaging, and legible.",
+				"content": "Contributed to the States United Democracy Center's Election Safety project, an interactive microsite exploring how fears of intimidation and violence at the polls shape voter confidence and turnout in the U.S. The project translates dense survey research into a clear, visual narrative around voter safety, perception, and participation.<br><br>My role focused on data visualization and frontend development, adapting static research graphics into interactive components. We designed and built reusable chart systems, including bar, column and dot charts with tooltip hovers, alongside large quotation carousels, expandable “nice-to-know” modules, and an exploratory data playground at the end of each “snapshot.” Using a clean, parametrized aesthetic and GSAP-driven animations, I led the application of motion throughout the microsite, ensuring consistency across varying data structures while keeping the visuals simple, engaging, and legible.",
 				"images": [
 					{
 						"type": "image",
