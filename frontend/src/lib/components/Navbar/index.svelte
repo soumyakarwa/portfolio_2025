@@ -8,9 +8,10 @@
 			href: string;
 		}[];
 		textClass?: string;
+		newTab?: boolean;
 	}
 
-	const { links, textClass }: Props = $props();
+	const { links, textClass, newTab = false }: Props = $props();
 </script>
 
 <div class="flex flex-col items-start justify-center lg:items-end">
@@ -22,6 +23,8 @@
 				page.route.id === link.href || `#${$activeId}` == link.href ? 'active' : ''
 			]}
 			href={link.href}
+			target={newTab ? '_blank' : undefined}
+			rel={newTab ? 'noopener noreferrer' : undefined}
 			onclick={() => ($isMenuOpen ? isMenuOpen.set(false) : null)}>{link.label}</a
 		>
 	{/each}

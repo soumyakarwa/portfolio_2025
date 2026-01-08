@@ -135,7 +135,7 @@
 		{#if projectLinks}
 			<Navbar links={projectLinks} textClass={'text-xs'} />
 		{/if}
-		<Navbar links={socialLinks} textClass={'text-xs'} />
+		<Navbar links={socialLinks} textClass={'text-xs'} newTab={true} />
 	</div>
 
 	<div
